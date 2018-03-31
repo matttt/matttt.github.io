@@ -2,7 +2,6 @@ const SHIP = 0
 const EARTH = 1
 const MOON = 2
 const G = xEtoY(6.7, -11)
-const g = guiOpts
 
 let ship, earth, moon
 let stars = []

@@ -47,8 +47,6 @@ function xEtoY(x, y) {
 }
 
 function initBody(prefix, mass) {
-  const g = guiOpts
-
   let body = new Sphere(vec(g[prefix + 'x'], g[prefix + 'y'], g[prefix + 'z']), 1000, g[prefix + 'c'])
   body.baseMass = xEtoY(mass[0], mass[1])
   body.vel = vec(g[prefix + 'vx'], g[prefix + 'vy'], g[prefix + 'vz'])

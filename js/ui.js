@@ -1,4 +1,4 @@
-var guiOpts = {
+var guiOpts, g = {
   'gravity': 1,
 
   sx: 0,
