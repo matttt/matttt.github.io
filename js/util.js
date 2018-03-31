@@ -1,3 +1,8 @@
+//constants
+const SUN = 0
+const EARTH = 1
+const MOON = 2
+//--------- 
 function vec(x, y, z) {
   return new THREE.Vector3(x, y, z)
 }
@@ -26,9 +31,9 @@ function makeSphere(r_, p_, c_, g_) {
 
 function makeStars(num) {
   for (var i = 0; i < num; i++) {
-    const starX = ship.pos.x + (-Math.random() * 100000 + 50000) + 50000
-    const starY = ship.pos.y + (-Math.random() * 100000 + 50000)
-    const starZ = ship.pos.z + (-Math.random() * 100000 + 50000)
+    const starX = sun.pos.x + (-Math.random() * 100000 + 50000) + 50000
+    const starY = sun.pos.y + (-Math.random() * 100000 + 50000)
+    const starZ = sun.pos.z + (-Math.random() * 100000 + 50000)
     const starPos = vec(starX, starY, starZ)
 
     let star = makeSphere(Math.random() + 5 * 25, starPos, '#FFFFFF', 3)
@@ -47,7 +52,7 @@ function xEtoY(x, y) {
 }
 
 function initBody(prefix, mass) {
-  let body = new Sphere(vec(g[prefix + 'x'], g[prefix + 'y'], g[prefix + 'z']), 1000, g[prefix + 'c'])
+  let body = new Sphere(vec(g[prefix + 'x'], g[prefix + 'y'], g[prefix + 'z']), g[prefix + 'r'], g[prefix + 'c'])
   body.baseMass = xEtoY(mass[0], mass[1])
   body.vel = vec(g[prefix + 'vx'], g[prefix + 'vy'], g[prefix + 'vz'])
   body.acc = vec()
@@ -64,45 +69,45 @@ function initBodies(bodies, guiOpts) {
 
   clearScene()
 
-  ship = initBody('s', [4,16])
-  earth = initBody('e', [6,8])
+  sun = initBody('s', [4,16])
+  earth = initBody('e', [4,14])
   moon = initBody('m', [6,8])
 }
 
 function calcForces() {
 
-  const shipPos = [ship.pos.x, ship.pos.y, ship.pos.z, ship.m]
+  const sunPos = [sun.pos.x, sun.pos.y, sun.pos.z, sun.m]
   const earthPos = [earth.pos.x, earth.pos.y, earth.pos.z, earth.m]
   const moonPos = [moon.pos.x, moon.pos.y, moon.pos.z, moon.m]
-  const shipToEarth = vecFromTo(shipPos, earthPos)
+  const sunToEarth = vecFromTo(sunPos, earthPos)
   const moonToEarth = vecFromTo(moonPos, earthPos)
-  const shipToMoon = vecFromTo(shipPos, moonPos)
-  const shipEarthD = distance(shipPos, earthPos)
+  const sunToMoon = vecFromTo(sunPos, moonPos)
+  const sunEarthD = distance(sunPos, earthPos)
   const moonEarthD = distance(moonPos, earthPos)
-  const shipMoonD = distance(shipPos, moonPos)
+  const sunMoonD = distance(sunPos, moonPos)
 
   //calculating gravitational forces
 
-  const shipEarthF = (G * guiOpts.gravity * ((ship.m * earth.m) / Math.pow(distance(shipPos, earthPos), 2)))
+  const sunEarthF = (G * guiOpts.gravity * ((sun.m * earth.m) / Math.pow(distance(sunPos, earthPos), 2)))
   const moonEarthForce = (G * guiOpts.gravity * ((moon.m * earth.m) / Math.pow(distance(moonPos, earthPos), 2)))
-  const shipMoonForce = (G * guiOpts.gravity * ((ship.m * moon.m) / Math.pow(distance(shipPos, moonPos), 2)))
+  const sunMoonForce = (G * guiOpts.gravity * ((sun.m * moon.m) / Math.pow(distance(sunPos, moonPos), 2)))
 
 
   //adjusting motion to account for gravitational forces
 
-  const shipF1 = vecTimesC(shipToEarth, shipEarthD).multiplyScalar(shipEarthF / ship.m)
-  const shipF2 = vecTimesC(shipToMoon, shipMoonD).multiplyScalar(shipMoonForce / ship.m)
-  const earthF1 = vecTimesC(shipToEarth, shipEarthD).multiplyScalar(-1 * shipEarthF / earth.m)
+  const sunF1 = vecTimesC(sunToEarth, sunEarthD).multiplyScalar(sunEarthF / sun.m)
+  const sunF2 = vecTimesC(sunToMoon, sunMoonD).multiplyScalar(sunMoonForce / sun.m)
+  const earthF1 = vecTimesC(sunToEarth, sunEarthD).multiplyScalar(-1 * sunEarthF / earth.m)
   const earthF2 = vecTimesC(moonToEarth, moonEarthD).multiplyScalar(-1 * moonEarthForce / earth.m);
   const moonF1 = vecTimesC(moonToEarth, moonEarthD).multiplyScalar(moonEarthForce / moon.m)
-  const moonF2 = vecTimesC(shipToMoon, shipMoonD).multiplyScalar(-1 * shipMoonForce / moon.m)
+  const moonF2 = vecTimesC(sunToMoon, sunMoonD).multiplyScalar(-1 * sunMoonForce / moon.m)
 
-  let shipF = shipF1.add(shipF2)
+  let sunF = sunF1.add(sunF2)
   let earthF = earthF1.add(earthF2)
   let moonF = moonF1.add(moonF2)
 
   let forces = []
-  forces[SHIP] = shipF
+  forces[SUN] = sunF
   forces[EARTH] = earthF
   forces[MOON] = moonF
 

@@ -10,8 +10,15 @@ class Sphere {
     this.count = 0
     this.m = 1
     this.prefix = ''
+    this.trailSpheres = []
+    this.radold = 0
 
     this.mesh.__dirtyPosition = true
+
+    for (let i = 0; i < 10; i++) {
+      let s = makeSphere(this.radius / 5, this.pos, this.trail)
+      this.trailSpheres.push(s)
+    }
   }
 
   applyForce(f) {
@@ -19,20 +26,37 @@ class Sphere {
   }
 
   update() {
-    const dt = 3
+    const dt = g.dt
 
     this.color = g[this.prefix + 'c']
     this.m = this.baseMass * g[this.prefix + 'm'] * 1000
     this.trail = g[this.prefix + 'tc']
-    this.mesh.geometry.radius = g[this.prefix + 'r']
+    this.radius = g[this.prefix + 'r']
     this.vel = this.vel.clone().add(this.acc.multiplyScalar(dt))
     this.pos = this.pos.clone().add(this.vel)
     this.mesh.position.set(this.pos.x, this.pos.y, this.pos.z)
+
+
+    if (this.radold != this.radius) {
+      for (let s of this.trailSpheres) {
+        s.geometry = new THREE.SphereGeometry(g[this.prefix + 'r'] / 5, 2, 2)
+        this.radold = this.radius
+        this.mesh.geometry = new THREE.SphereGeometry(g[this.prefix + 'r'], 8, 8)
+      }
+    }
+
+    this.radold = this.radius
+
   }
 
   leaveTrail() {
     this.count++
 
-    if (this.count % g.trailRate === 0) makeSphere(this.radius / 5, this.pos, this.trail)
+    if (this.count % (26 - g.trailRate) === 0) {
+      let s = makeSphere(this.radius / 5, this.pos, this.trail)
+      this.trailSpheres.push(s)
+      if (this.count > 5000) scene.remove(this.trailSpheres.shift())
+    }
+
   }
 }
