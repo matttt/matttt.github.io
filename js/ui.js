@@ -39,6 +39,7 @@ var guiOpts = {
   type: 'three',
   trails: true,
   stars: false,
+  trailRate: 5,
   restart: function () {
     initBodies(guiOpts)
 
@@ -56,7 +57,7 @@ function buildFolder(name, prefix) {
   f.add(guiOpts, prefix+'vx').min(-500).max(500).step(100).name('vel x')
   f.add(guiOpts, prefix+'vy').min(-500).max(500).step(100).name('vel y')
   f.add(guiOpts, prefix+'vz').min(-500).max(500).step(100).name('vel z')
-  f.add(guiOpts, prefix+'m').min(-5).max(5).step(.25).name('mass')
+  f.add(guiOpts, prefix+'m').min(.25).max(5).step(.25).name('mass')
   f.add(guiOpts, prefix+'r').min(0).max(10000).step(100).name('radius')  
   f.addColor(guiOpts, prefix+'c').name('color')
   f.addColor(guiOpts, prefix+'tc').name('trail color')
@@ -72,6 +73,7 @@ function initUi() {
   buildFolder('Earth','e')
   buildFolder('Moon','m')
 
+  gui.add(guiOpts, 'trailRate').min(1).max(25).step(1)
   gui.add(guiOpts, 'trails').name('Draw Trails')
   gui.add(guiOpts, 'stars').name('Draw Stars')
 }

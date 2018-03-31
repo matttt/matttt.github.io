@@ -1,3 +1,5 @@
+const g = guiOpts
+
 class Sphere {
   constructor(posVec, radius, color) {
     this.pos = posVec
@@ -20,7 +22,7 @@ class Sphere {
 
   update() {
     const dt = 3
-    const g = guiOpts
+    
 
     this.color = g[this.prefix + 'c']
     this.m = this.baseMass * g[this.prefix + 'm'] * 1000
@@ -34,6 +36,6 @@ class Sphere {
   leaveTrail() {
     this.count++ 
 
-    if (this.count % 5 === 0) makeSphere(this.radius / 5, this.pos, this.trail)
+    if (this.count % g.trailRate === 0) makeSphere(this.radius / 5, this.pos, this.trail)
   }
 }
