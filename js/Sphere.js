@@ -22,8 +22,7 @@ class Sphere {
 
   update() {
     const dt = 3
-    
-
+  
     this.color = g[this.prefix + 'c']
     this.m = this.baseMass * g[this.prefix + 'm'] * 1000
     this.trail = g[this.prefix + 'tc']
