@@ -32,8 +32,8 @@ class Sphere {
   }
 
   leaveTrail() {
-    this.count += 1
+    this.count++ 
 
-    if (this.count % 10 === 0) makeSphere(this.radius / 5, this.pos, this.trail)
+    if (this.count % 5 === 0) makeSphere(this.radius / 5, this.pos, this.trail)
   }
 }
