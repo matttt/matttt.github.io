@@ -1,7 +1,5 @@
 var camera, scene, renderer, controls, gui, mesh, stats
 
-const CAM_INIT_POS = vec(0, 0, 30000)
-
 init()
 animate()
 
@@ -21,11 +19,24 @@ function init() {
 
   controls.enableDamping = true
   controls.autoRotate = false
-  controls.rotateSpeed = .5
-  controls.dampingFactor = 1.5
+  controls.rotateSpeed = .07
+  controls.dampingFactor = .03
+
+  var dir = new THREE.Vector3( 1, 2, 0 );
+
+  //normalize the direction vector (convert to vector of length 1)
+  dir.normalize();
+  
+  var origin = new THREE.Vector3( 0, 0, 0 );
+  var length = 50000;
+  var hex = 0xfffff;
+  
+  var arrowHelper = new THREE.ArrowHelper( dir, origin, length, hex );
+  arrowHelper.headWidth = 10000;
+  scene.add( arrowHelper );
 
   stats = new Stats();
-  stats.showPanel(1); // 0: fps, 1: ms, 2: mb, 3+: custom
+  stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
   document.body.appendChild(stats.dom);
 
   renderer = new THREE.WebGLRenderer()

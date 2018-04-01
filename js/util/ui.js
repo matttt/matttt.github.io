@@ -1,5 +1,6 @@
 let g;
 
+
 let guiOpts = g = {
   'gravity': 1,
   dt: 3,
@@ -12,7 +13,7 @@ let guiOpts = g = {
   svy: 0,
   svz: 0,
   sm: 1,
-  sc: '#FF0000',
+  sc: '#f9a602',
   sr: 1000,
   stc: '#FF0000',
   
@@ -42,21 +43,20 @@ let guiOpts = g = {
 
   //camera
   scootLeft: () => {
-    let cp = camera.postion;
-    cp.set(cp.x - 50000, cp.y, cp.z)
+    let cp = camera.position;
+    cp.set(cp.x - CAM_SCOOCH_AMOUNT, cp.y, cp.z)
   },
   scootRight: () => {
-    let cp = camera.postion;
-    cp.set(cp.x + 50000, cp.y, cp.z)
+    let cp = camera.position;
+    cp.set(cp.x + CAM_SCOOCH_AMOUNT, cp.y, cp.z)
   },
   scootUp: () => {
-    let cp = camera.postion;
-    cp.set(cp.x, cp.y - 50000, cp.z)
+    let cp = camera.position;
+    cp.set(cp.x, cp.y + CAM_SCOOCH_AMOUNT, cp.z)
   },
   scootDown: () => {
-    alert(tf)
-    let cp = camera.position
-    cp.set(cp.x, cp.y + 50000, cp.z)
+    let cp = camera.position;
+    cp.set(cp.x, cp.y - CAM_SCOOCH_AMOUNT, cp.z)
   },
   
   
