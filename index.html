@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
   <link rel="stylesheet" href="css/dat.gui.css">
   <style>
     body {
@@ -13,14 +16,14 @@
     }
   </style>
   <script>
-		// iOS iframe auto-resize workaround
-		if ( /(iPad|iPhone|iPod)/g.test( navigator.userAgent ) ) {
-			var scene = document.getElementById( 'scene' );
-			scene.style.width = getComputedStyle( scene ).width;
-			scene.style.height = getComputedStyle( scene ).height;
-			scene.setAttribute( 'scrolling', 'yes' );
-		}
-		</script>
+    // iOS iframe auto-resize workaround
+    if (/(iPad|iPhone|iPod)/g.test(navigator.userAgent)) {
+      var scene = document.getElementById('scene');
+      scene.style.width = getComputedStyle(scene).width;
+      scene.style.height = getComputedStyle(scene).height;
+      scene.setAttribute('scrolling', 'yes');
+    }
+  </script>
 </head>
 
 

@@ -7,8 +7,7 @@ let bodies = []
 function projectInit() {
 
   initUi()
-
-
+  
   if (g.stars) makeStars(50)
 
   universe = new Universe(scene)
