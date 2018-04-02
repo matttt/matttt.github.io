@@ -3,7 +3,7 @@ let g;
 
 let guiOpts = g = {
   'gravity': 1,
-  dt: 3,
+  dt: 1,
 
   //sun
   sx: 0,
@@ -16,6 +16,8 @@ let guiOpts = g = {
   sc: '#f9a602',
   sr: 1000,
   stc: '#FF0000',
+  sel: true,
+  set: false,
   
   //moon
   mx: 20000,
@@ -24,10 +26,13 @@ let guiOpts = g = {
   mvx: 500,
   mvy: 500,
   mvz: -250,
-  mm: .3,
-  mc: '#FFFFFF',
+  mm: 1,
+  mc: '#FFFFFA',
   mr: 1000,
-  mtc: '#FF0000',
+  mtc: '#E9D985',
+  mel: false,
+  met: true,
+  
   
   //earth
   ex: -20000,
@@ -36,10 +41,12 @@ let guiOpts = g = {
   evx: 500,
   evy: -500,
   evz: -250,
-  em: .3,
-  ec: '#0000FF',
+  em: 1,
+  ec: '#0000CC',
   er: 1000,
-  etc: '#FF0000',
+  etc: '#CC33DD',
+  eel: false,
+  eet: true,
 
   //camera
   scootLeft: () => {
@@ -63,13 +70,13 @@ let guiOpts = g = {
   type: 'three',
   trails: true,
   stars: false,
-  trailRate: 15,
+  trailRate: 20,
   restart: function () {
-    initBodies(g)
+    universe.initBodies(g)
 
     let cp = camera.position
     cp.set(0, 0, CAM_INIT_POS.z)
-    camera.lookAt(ship.pos)
+    camera.lookAt(sun.pos)
   }
 }
 
@@ -85,13 +92,15 @@ function buildFolder(name, prefix) {
   f.add(g, prefix+'r').min(0).max(10000).step(100).name('radius')  
   f.addColor(g, prefix+'c').name('color')
   f.addColor(g, prefix+'tc').name('trail color')
+  f.add(g, prefix+'el').name('enable light')
+  f.add(g, prefix+'et').name('enable trail')
 }
 
 
 function initUi() {
   gui.add(g, 'restart')
   gui.add(g, 'gravity').min(.1).max(10).step(0.1)
-  gui.add(g, 'dt').min(.3).max(5).step(0.1)
+  gui.add(g, 'dt').min(.5).max(3).step(0.05)
   
 
   buildFolder('Sun','s')
@@ -104,7 +113,7 @@ function initUi() {
   camFolder.add(g, 'scootUp').name('Scoot Up')
   camFolder.add(g, 'scootDown').name('Scoot Down')
 
-  gui.add(g, 'trailRate').min(1).max(25).step(1)
+  gui.add(g, 'trailRate').min(.5).max(30).step(.5)
   gui.add(g, 'trails').name('Draw Trails')
   gui.add(g, 'stars').name('Draw Stars')
 }

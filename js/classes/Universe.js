@@ -2,6 +2,8 @@ class Universe {
   constructor(scene) {
     this.scene = scene
 
+    this.time = 0
+
     this.bodies = []
     this.stars = []
     this.starCount = 0
@@ -15,18 +17,86 @@ class Universe {
     }
   }
 
+  getCleanBodyArr() {
+    let newBodies = this.bodies.map((b) => {
+      let cleanBody = { pos: b.pos, m: b.m }
+      return cleanBody
+    })
+
+    return newBodies
+  }
+
+  beginTime(func) {
+    let here = this
+
+    this.worker = new Worker('js/util/physics_worker.js');
+
+    this.worker.onmessage = function (e) {
+      if (e.data.started === true) {
+        here.timeTick(func);
+      } else {
+        forces = e.data.forces;
+      }
+    }
+
+    forces = Physics.calcForces(universe.bodies, g)
+  }
+
+  timeTick(func) {
+    let bodies = this.getCleanBodyArr()
+    let g_ = Object.assign({}, g)
+
+    g_['scootLeft'] = null
+    g_['scootRight'] = null
+    g_['scootUp'] = null
+    g_['scootDown'] = null
+    g_['restart'] = null
+
+
+    this.worker.postMessage({ bodies: bodies, g: g_ });
+
+    func()
+    this.time++
+
+    setTimeout(() => {
+      this.timeTick(func)
+    }, 25 / g.dt)
+  }
+
   makeStars(num) {
     for (var i = 0; i < num; i++) {
-      const starX = this.bodies[SUN].pos.x + (-Math.random() * 100000 + 50000) + 50000
-      const starY = this.bodies[SUN].pos.y + (-Math.random() * 100000 + 50000)
-      const starZ = this.bodies[SUN].pos.z + (-Math.random() * 100000 + 50000)
-      const starPos = vec(starX, starY, starZ)
+      const starX1 = this.bodies[SUN].pos.x + (-Math.random() * 1000000 + 500000) + 50000
+      const starY1 = this.bodies[SUN].pos.y + (-Math.random() * 1000000 + 500000)
+      const starZ1 = this.bodies[SUN].pos.z + (-Math.random() * 1000000 + 500000)
+      const starPos1 = vec(starX1, starY1, starZ1)
+      const starX2 = this.bodies[SUN].pos.x + (-Math.random() * 100000 + 50000) + 50000
+      const starY2 = this.bodies[SUN].pos.y + (-Math.random() * 100000 + 50000)
+      const starZ2 = this.bodies[SUN].pos.z + (-Math.random() * 100000 + 50000)
+      const starPos2 = vec(starX2, starY2, starZ2)
 
-      let star = this.makeSphere(Math.random() + 5 * 25, starPos, '#FFFFFF', 3)
-      this.stars.push(star)
+      let star1 = this.makeSphere(Math.random() + 5 * 100, starPos1, '#FFFFFF', 2)
+      let star2 = this.makeSphere(Math.random() + 5 * 25, starPos2, '#FFFFFF', 3)
+      this.stars.push(star1, star2)
 
-      this.starCount++
+      this.starCount += 2
     }
+  }
+
+  drawTitle() {
+    var windowHalfX = window.innerWidth / 2;
+    var windowHalfY = window.innerHeight / 2;
+
+    var loader = new THREE.FontLoader();
+    loader.load('fonts/droid.json', function (font) {
+
+
+      var title = "OrbiTool";
+      var subTitle = "by @matttt and Max Schweiger"
+
+      addText(title, vec(5000,34000,-50000), 20000, font)
+      addText(subTitle, vec(5000,29000,-50000), 2000, font)
+    })
+
   }
 
   cleanStars(num) {
@@ -43,57 +113,20 @@ class Universe {
     body.trail = g[prefix + 'tc']
     body.prefix = prefix
 
+    body.initLight()
+
     return body
   }
-  
+
   initBodies(bodies, guiOpts) {
     this.clearScene()
 
-    sun = this.initBody('s', [4, 16])
+    sun = this.initBody('s', [6, 16])
     earth = this.initBody('e', [4, 14])
     moon = this.initBody('m', [6, 8])
 
     this.bodies[SUN] = sun
     this.bodies[EARTH] = earth
     this.bodies[MOON] = moon
-  }
-
-  calcForces() {
-    const sunPos = [sun.pos.x, sun.pos.y, sun.pos.z, sun.m]
-    const earthPos = [earth.pos.x, earth.pos.y, earth.pos.z, earth.m]
-    const moonPos = [moon.pos.x, moon.pos.y, moon.pos.z, moon.m]
-    const sunToEarth = vecFromTo(sunPos, earthPos)
-    const moonToEarth = vecFromTo(moonPos, earthPos)
-    const sunToMoon = vecFromTo(sunPos, moonPos)
-    const sunEarthD = distance(sunPos, earthPos)
-    const moonEarthD = distance(moonPos, earthPos)
-    const sunMoonD = distance(sunPos, moonPos)
-
-    //calculating gravitational forces
-
-    const sunEarthF = (G * guiOpts.gravity * ((sun.m * earth.m) / Math.pow(distance(sunPos, earthPos), 2)))
-    const moonEarthForce = (G * guiOpts.gravity * ((moon.m * earth.m) / Math.pow(distance(moonPos, earthPos), 2)))
-    const sunMoonForce = (G * guiOpts.gravity * ((sun.m * moon.m) / Math.pow(distance(sunPos, moonPos), 2)))
-
-
-    //adjusting motion to account for gravitational forces
-
-    const sunF1 = vecTimesC(sunToEarth, sunEarthD).multiplyScalar(sunEarthF / sun.m)
-    const sunF2 = vecTimesC(sunToMoon, sunMoonD).multiplyScalar(sunMoonForce / sun.m)
-    const earthF1 = vecTimesC(sunToEarth, sunEarthD).multiplyScalar(-1 * sunEarthF / earth.m)
-    const earthF2 = vecTimesC(moonToEarth, moonEarthD).multiplyScalar(-1 * moonEarthForce / earth.m);
-    const moonF1 = vecTimesC(moonToEarth, moonEarthD).multiplyScalar(moonEarthForce / moon.m)
-    const moonF2 = vecTimesC(sunToMoon, sunMoonD).multiplyScalar(-1 * sunMoonForce / moon.m)
-
-    let sunF = sunF1.add(sunF2)
-    let earthF = earthF1.add(earthF2)
-    let moonF = moonF1.add(moonF2)
-
-    let forces = []
-    forces[SUN] = sunF
-    forces[EARTH] = earthF
-    forces[MOON] = moonF
-
-    return forces
   }
 }

@@ -1,5 +1,6 @@
 var camera, scene, renderer, controls, gui, mesh, stats
 
+
 init()
 animate()
 
@@ -19,8 +20,9 @@ function init() {
 
   controls.enableDamping = true
   controls.autoRotate = false
-  controls.rotateSpeed = .07
+  controls.rotateSpeed = .05
   controls.dampingFactor = .03
+
 
   var dir = new THREE.Vector3( 1, 2, 0 );
 
