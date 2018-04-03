@@ -1,6 +1,5 @@
 var camera, scene, renderer, controls, gui, mesh, stats
 
-
 init()
 animate()
 
@@ -14,15 +13,10 @@ function init() {
 
   controls = new THREE.OrbitControls(camera)
 
-  gui = new dat.gui.GUI()
-  gui.remember(guiOpts)
-
-
   controls.enableDamping = true
   controls.autoRotate = false
   controls.rotateSpeed = .05
   controls.dampingFactor = .03
-
 
   var dir = new THREE.Vector3( 1, 2, 0 );
 
@@ -31,7 +25,7 @@ function init() {
   
   var origin = new THREE.Vector3( 0, 0, 0 );
   var length = 50000;
-  var hex = 0xfffff;
+  var hex = 0xffffff;
   
   var arrowHelper = new THREE.ArrowHelper( dir, origin, length, hex );
   arrowHelper.headWidth = 10000;
@@ -39,6 +33,7 @@ function init() {
 
   stats = new Stats();
   stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
+  stats.domElement.style.display = 'none'
   document.body.appendChild(stats.dom);
 
   renderer = new THREE.WebGLRenderer({antialias: true})
@@ -51,6 +46,11 @@ function init() {
   // document.body.appendChild(container)
 
   document.body.appendChild(renderer.domElement)
+
+  gui = new dat.gui.GUI()
+  gui.remember(guiOpts)
+  $(gui.domElement).css('opacity', 0)
+
 
   projectInit()
 

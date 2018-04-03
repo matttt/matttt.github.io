@@ -1,6 +1,10 @@
-.mainmodal {
-  position: fixed;
-  top: 25%;
-  left: 25%;
-  width: 25%;
+.dg {
+  z-index: 0;
+}
+
+.sliderW {
+  width: 30%
+}
+#body-title {
+  width: 60%
 }

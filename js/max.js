@@ -1,28 +1,23 @@
-let sun, earth, moon, universe, forces
+let sun, earth, moon, universe, u
 let stars = []
 let bodies = []
+
+//lol
+let titles = []
 
 function loop() {
   //reg draw: runs at 60fps
   sun.update()
   earth.update()
   moon.update()
-  
-  if (guiOpts.trails) {
-    sun.leaveTrail(sun.pos)
-    moon.leaveTrail(moon.pos)
-    earth.leaveTrail(earth.pos)
-  }
-  
-  if (g.stars) universe.makeStars(2)
 
-  controls.target = sun.pos
-
-  if (universe.starCount > 1000 && g.stars) universe.cleanStars(4);
+  
+  handlers() // js/util/handlers
 }
 
 
 function projectInit() {
+  renderer.domElement.style.display = 'none'
 
   initUi()
 

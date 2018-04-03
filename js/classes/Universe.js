@@ -7,6 +7,7 @@ class Universe {
     this.bodies = []
     this.stars = []
     this.starCount = 0
+    this.timeStopped = false
 
     this.makeSphere = makeSphere
   }
@@ -15,6 +16,17 @@ class Universe {
     while (this.scene.children.length > 0) {
       this.scene.remove(this.scene.children[0])
     }
+  }
+
+  processInput() {
+    let g_ = Object.assign({}, g)
+    let bodies = this.getCleanBodyArr()
+
+    for (let key of Object.keys(g_)) {
+      if (typeof g_[key] == 'function') g_[key] = null
+    }
+
+    return g_
   }
 
   getCleanBodyArr() {
@@ -26,43 +38,79 @@ class Universe {
     return newBodies
   }
 
+  revealUi() {
+    $(renderer.domElement).fadeIn(2500)
+    $(stats.domElement).fadeIn(2500)
+    
+    let oldH = $(gui.domElement).css('height')
+    $(gui.domElement).css('height', 0)
+    $(gui.domElement).animate({
+      'height': oldH,
+      'opacity': 1
+    }, 1000)
+    $('#load-wheel').fadeOut(2500)
+    
+    onWindowResize()
+
+    let g_ = this.processInput()
+    let bodies = this.getCleanBodyArr()
+
+    this.worker.postMessage({ bodies: bodies, g: g_ });
+    this.timeTick();
+  }
+
+  startWorker(e) {
+    let here = this
+    let forces = e.data.forces
+
+    physLoop(forces)
+    this.timeStopped = false
+
+    let g_ = here.processInput()
+    let bodies = here.getCleanBodyArr()
+
+    function tryTick() {
+      setTimeout(() => {
+        if (here.timeStopped === false) {
+          here.timeTick()
+          here.worker.postMessage({ bodies: bodies, g: g_ });
+        } else {
+          tryTick()
+        }
+
+      }, BASE_PHYS_TICK / g.dt)
+    }
+
+    tryTick()
+  }
+
   beginTime(func) {
     let here = this
 
-    this.worker = new Worker('js/util/physics_worker.js');
-
-
-    document.body.style.display = 'none'
+    if (!this.worker) this.worker = new Worker('js/util/physics_worker.js');
 
     this.worker.onmessage = function (e) {
       if (e.data.started === true) {
-        document.body.style.display = 'inline'
-        onWindowResize()
-        here.timeTick(func);
+        here.revealUi()
       } else {
-        forces = e.data.forces;
+        here.startWorker(e)
       }
     }
-
-    forces = Physics.calcForces(universe.bodies, g)
   }
 
+
   timeTick(func) {
-    let bodies = this.getCleanBodyArr()
-    let g_ = Object.assign({}, g)
 
-    for (let key of Object.keys(g_)) {
-      if (typeof g_[key] == 'function') g_[key] = null
-    }
-
-    this.worker.postMessage({ bodies: bodies, g: g_ });
-
-    func()
     this.time++
 
-    setTimeout(() => {
-      this.timeTick(func)
-    }, BASE_PHYS_TICK / g.dt)
+  }
+
+  startTime() {
+    this.timeStopped = false
+  }
+
+  stopTime() {
+    this.timeStopped = true
   }
 
   makeStars(num) {
@@ -85,20 +133,14 @@ class Universe {
   }
 
   drawTitle() {
-    var windowHalfX = window.innerWidth / 2;
-    var windowHalfY = window.innerHeight / 2;
-
     var loader = new THREE.FontLoader();
     loader.load('fonts/droid.json', function (font) {
+      let titlePos = TITLE.POS;
+      let subTitlePos = TITLE.POS.clone().add(vec(0,-6000,0));
 
-
-      var title = "OrbiTool";
-      var subTitle = "by @matttt and Max Schweiger"
-
-      addText(title, vec(5000, 34000, -50000), 20000, font)
-      addText(subTitle, vec(5000, 29000, -50000), 2000, font)
+      titles.push(addText(TITLE.TEXT, titlePos, 20000, font))  
+      titles.push(addText(TITLE.SUBTEXT, subTitlePos, 2000, font))
     })
-
   }
 
   cleanStars(num) {
@@ -106,7 +148,7 @@ class Universe {
     this.starCount -= num;
   }
 
-  initBody(prefix, mass) {
+  initBody(name, prefix, mass) {
     let body = new Sphere(vec(g[prefix + 'x'], g[prefix + 'y'], g[prefix + 'z']), g[prefix + 'r'], g[prefix + 'c'])
     body.baseMass = xEtoY(mass[0], mass[1])
     body.vel = vec(g[prefix + 'vx'], g[prefix + 'vy'], g[prefix + 'vz'])
@@ -114,6 +156,7 @@ class Universe {
     body.m = xEtoY(mass[0], mass[1]) * g[prefix + 'm'] * 1000
     body.trail = g[prefix + 'tc']
     body.prefix = prefix
+    body.name = name
 
     body.initLight()
 
@@ -123,9 +166,9 @@ class Universe {
   initBodies(bodies, guiOpts) {
     this.clearScene()
 
-    sun = this.initBody('s', [6, 16])
-    earth = this.initBody('e', [4, 14])
-    moon = this.initBody('m', [6, 8])
+    sun = this.initBody('sun', 's', [6, 16])
+    earth = this.initBody('earth', 'e', [4, 14])
+    moon = this.initBody('moon', 'm', [6, 8])
 
     this.bodies[SUN] = sun
     this.bodies[EARTH] = earth

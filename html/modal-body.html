@@ -1,0 +1,131 @@
+<div class="modal mainmodal" id="body-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div id="body-title" class="input-group input-group-lg">
+            <input type="text" id="modal-title" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- ['x', 'y', 'z', 'vx', 'vy', 'vz', 'r', 'm', 'et', 'el', 'c', 'tc'] -->
+        <!-- Body Input Model -->
+        <div class="modal-body">
+          <div class="container-fluid">
+            <!-- Row 1 -->
+            <div class="row">
+              <div class="col-md-2">
+                <p>
+                  <b>x</b>
+                  <input type="text" class="span2 sliderW" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128"
+                    data-slider-id="GC" id="x" data-slider-tooltip="hide" data-slider-handle="round" />
+                </p>
+              </div>
+              <div class="col-md-5 ml-auto">
+                <p>
+                  <b>vx</b>
+                  <input type="text" class="span2 sliderW" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128"
+                    data-slider-id="GC" id="vx" data-slider-tooltip="hide" data-slider-handle="round" />
+                </p>
+              </div>
+            </div>
+            <!-- Row 2 -->
+            <div class="row">
+              <div class="col-md-2">
+                <p>
+                  <b>y</b>
+                  <input type="text" class="span2 sliderW" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128"
+                    id="y" data-slider-tooltip="hide" data-slider-handle="round" />
+                </p>
+              </div>
+              <div class="col-md-5 ml-auto">
+                <p>
+                  <b>vy</b>
+                  <input type="text" class="span2 sliderW" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128"
+                    data-slider-id="GC" id="vy" data-slider-tooltip="hide" data-slider-handle="round" />
+                </p>
+              </div>
+            </div>
+            <!-- Row 3 -->
+            <div class="row">
+              <div class="col-md-2">
+                <p>
+                  <b>z</b>
+                  <input type="text" class="span2 sliderW" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128"
+                    data-slider-id="GC" id="z" data-slider-tooltip="hide" data-slider-handle="round" />
+                </p>
+              </div>
+              <div class="col-md-5 ml-auto">
+                <p>
+                  <b>vz</b>
+                  <input type="text" class="span2 sliderW" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128"
+                    data-slider-id="GC" id="vz" data-slider-tooltip="hide" data-slider-handle="round" />
+                </p>
+              </div>
+            </div>
+            <!-- Row 4 -->
+            <div class="row">
+              <div class="col-md-2">
+                <p>
+                  <b>m</b>
+                  <input type="text" class="span2 sliderW" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128"
+                    data-slider-id="GC" id="m" data-slider-tooltip="hide" data-slider-handle="round" />
+                </p>
+              </div>
+              <div class="col-md-5 ml-auto">
+                <p>
+                  <b>r</b>
+                  <input type="text" class="span2 sliderW" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128"
+                    data-slider-id="GC" id="r" data-slider-tooltip="hide" data-slider-handle="round" />
+                </p>
+              </div>
+            </div>
+            <!-- Row 5 -->
+            <div class="row">
+              <div class="col-md-4">
+                <p>
+                  <b>Enable Trails</b>
+                  <input id='et' type="checkbox" />
+                </p>
+              </div>
+              <div class="col-md-5 ml-auto">
+                <p>
+                  <b>Enable Light</b>
+                  <input id='el' type="checkbox" />
+                </p>
+              </div>
+            </div>
+            <!-- Row 5 -->
+            <div class="row">
+              <div class="col-md-3">
+                <p>
+                  <b>Body Color</b>
+                  <select id="body-color">
+                    <option value="106" data-color="#A0522D">sienna</option>
+                    <option value="47" data-color="#CD5C5C">indianred</option>
+                    <option value="87" data-color="#FF4500">orangered</option>
+                    <option value="15" data-color="#DC143C">crimson</option>
+                    <option value="24" data-color="#FF8C00">darkorange</option>
+                    <option value="78" data-color="#C71585">mediumvioletred</option>
+                  </select>
+                </p>
+              </div>
+              <div class="col-md-5 ml-auto">
+                <p>
+                  <b>Trail Color</b>
+                  <input id='el' type="checkbox" />
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onClick="updateData()">Update</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

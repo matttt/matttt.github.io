@@ -1,4 +1,4 @@
-function physLoop() {
+function physLoop(forces) {
   //physics stuffz... runs at 120fps
 
   if (universe.time > 0) {
