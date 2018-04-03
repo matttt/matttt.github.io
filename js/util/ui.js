@@ -77,6 +77,9 @@ let guiOpts = g = {
     let cp = camera.position
     cp.set(0, 0, CAM_INIT_POS.z)
     camera.lookAt(sun.pos)
+  },
+  testmodal: function () {
+    $('#test-modal').modal()
   }
 }
 
@@ -116,4 +119,5 @@ function initUi() {
   gui.add(g, 'trailRate').min(.5).max(30).step(.5)
   gui.add(g, 'trails').name('Draw Trails')
   gui.add(g, 'stars').name('Draw Stars')
+  gui.add(g, 'testmodal').name('test modal')
 }

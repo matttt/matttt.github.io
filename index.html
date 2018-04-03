@@ -7,7 +7,10 @@
   <meta http-equiv="cache-control" content="max-age=0" />
   <meta http-equiv="cache-control" content="no-cache" />
   <meta http-equiv="expires" content="0" />
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/dat.gui.css">
+  <link rel="stylesheet" href="css/main.css">
   <style>
     body {
       margin: 0px;
@@ -33,6 +36,9 @@
   <script src="libs/stats.js"></script>
   <script src="libs/orbitcontrols.js"></script>
   <script src="libs/dat.gui.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="libs/bootstrap.min.js"></script>
+  <script src="libs/bootstrap.bundle.min.js"></script>
   <!-- Utility -->
   <script src="js/util/util.js"></script>
   <script src="js/util/constants.js"></script>
@@ -46,6 +52,38 @@
   <script src="js/max.js"></script>
   <!-- Init Ui -->
   <script src="js/util/three.setup.js"></script>
+
+  <div class="modal" id="test-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-5">X <input type="number"></div>
+              <div class="col-md-5">.col-md-4</div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 ml-auto">.col-md-3 .ml-auto</div>
+              <div class="col-md-2 ml-auto">.col-md-2 .ml-auto</div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 ml-auto">.col-md-6 .ml-auto</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

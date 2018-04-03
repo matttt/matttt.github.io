@@ -41,9 +41,15 @@ function init() {
   stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
   document.body.appendChild(stats.dom);
 
-  renderer = new THREE.WebGLRenderer()
+  renderer = new THREE.WebGLRenderer({antialias: true})
   renderer.setPixelRatio(window.devicePixelRatio)
   renderer.setSize(window.innerWidth, window.innerHeight)
+  
+  // let container = document.createElement('div')
+  // container.appendChild(renderer.domElement)
+
+  // document.body.appendChild(container)
+
   document.body.appendChild(renderer.domElement)
 
   projectInit()

@@ -28,7 +28,7 @@ function vecMultC(p0, c) {
 
 function makeSphere(r_, p_, c_, g_) {
   let p = p_ || vec()
-  var geometry = new THREE.SphereGeometry(r_, g_ || 10, g_ || 10)
+  var geometry = new THREE.SphereGeometry(r_, g_ || 50, g_ || 50)
   var material = new THREE.MeshBasicMaterial({ color: c_ })
 
   mesh = new THREE.Mesh(geometry, material)
@@ -46,7 +46,7 @@ function addText(text, pos, size, font) {
     font: font,
     size: size,
     height: 1000,
-    curveSegments: 4
+    curveSegments: 3
 
   });
 

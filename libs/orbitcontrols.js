@@ -385,6 +385,8 @@ THREE.OrbitControls = function (object, domElement) {
 
 	}();
 
+	scale = 3
+
 	function dollyIn(dollyScale) {
 		scale = scale /= .95;
 

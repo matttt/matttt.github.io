@@ -31,7 +31,7 @@ function projectInit() {
   universe = new Universe(scene)
 
   universe.initBodies(guiOpts) 
-  universe.beginTime(physLoop) 
   universe.drawTitle() 
+  universe.beginTime(physLoop) 
 
 }

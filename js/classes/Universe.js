@@ -31,8 +31,13 @@ class Universe {
 
     this.worker = new Worker('js/util/physics_worker.js');
 
+
+    document.body.style.display = 'none'
+
     this.worker.onmessage = function (e) {
       if (e.data.started === true) {
+        document.body.style.display = 'inline'
+        onWindowResize()
         here.timeTick(func);
       } else {
         forces = e.data.forces;
@@ -46,12 +51,9 @@ class Universe {
     let bodies = this.getCleanBodyArr()
     let g_ = Object.assign({}, g)
 
-    g_['scootLeft'] = null
-    g_['scootRight'] = null
-    g_['scootUp'] = null
-    g_['scootDown'] = null
-    g_['restart'] = null
-
+    for (let key of Object.keys(g_)) {
+      if (typeof g_[key] == 'function') g_[key] = null
+    }
 
     this.worker.postMessage({ bodies: bodies, g: g_ });
 
@@ -60,7 +62,7 @@ class Universe {
 
     setTimeout(() => {
       this.timeTick(func)
-    }, 25 / g.dt)
+    }, BASE_PHYS_TICK / g.dt)
   }
 
   makeStars(num) {
@@ -93,8 +95,8 @@ class Universe {
       var title = "OrbiTool";
       var subTitle = "by @matttt and Max Schweiger"
 
-      addText(title, vec(5000,34000,-50000), 20000, font)
-      addText(subTitle, vec(5000,29000,-50000), 2000, font)
+      addText(title, vec(5000, 34000, -50000), 20000, font)
+      addText(subTitle, vec(5000, 29000, -50000), 2000, font)
     })
 
   }

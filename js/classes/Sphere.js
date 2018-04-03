@@ -65,7 +65,7 @@ class Sphere {
 
     if (this.count % (26 - g.trailRate) === 0 && g[this.prefix + 'et']) {
       
-      let s = makeSphere(this.radius / 5, this.pos, this.trail)
+      let s = makeSphere(this.radius / 5, this.pos, this.trail, 4)
       this.trailSpheres.push(s)
       if (this.count > 3000) universe.scene.remove(this.trailSpheres.shift())
     }
