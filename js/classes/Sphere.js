@@ -57,11 +57,7 @@ class Sphere {
         this.mesh.position.set(this.pos.x, this.pos.y, this.pos.z)
 
         if (this.radold != this.radius) {
-            for (let s of this.trailSpheres) {
-                s.geometry = new THREE.SphereGeometry(g[this.prefix + 'r'] / 5, 2, 2)
-                this.radold = this.radius
-                this.mesh.geometry = new THREE.SphereGeometry(g[this.prefix + 'r'], 8, 8)
-            }
+            this.mesh.geometry = new THREE.SphereGeometry(g[this.prefix + 'r'], 30, 30)
         }
 
         if (this.enableLight) {

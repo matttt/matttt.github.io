@@ -73,20 +73,32 @@ function initSlider(d) {
     var f = $('#' + d.f).slider({
             formatter: function (value) {
                 return 'value: ' + value;
-            }
+            },
+            tooltip: 'show'
         })
         .data('slider')
         .on('slide', updateData)
 
     fieldElems.push(f)
 }
+let cp1, cp2
 
-function initColor(d) {
-    d.cp = $('#' + d.f).colorpicker({
+function initColor(d, c) {
+    cp1 = $('#c').colorpicker({
         inline: true,
-        container: true
+        container: true,
+        color: g[currentBody.prefix + 'c']
     }).on('colorpickerChange', function (e) {
-        g[currentBody.prefix + d.f] = e.color.toString('hex');
+        g[currentBody.prefix + 'c'] = e.color.toString('hex');
+    })
+
+    cp2 = $('#tc').colorpicker({
+        inline: true,
+        container: true,
+        color: g[currentBody.prefix + 'tc']
+    }).on('colorpickerChange', function (e) {
+        g[currentBody.prefix + 'tc'] = e.color.toString('hex');
+
     })
 }
 
@@ -96,6 +108,8 @@ function onModalHide() {
         $(gui.domElement).show(1000, function () {
             universe.startTime()
         })
+
+        $('.colorpickr-inline').remove()
     })
 }
 
@@ -115,11 +129,10 @@ function initModal() {
             let t = dataPoint.type
             if (t === 'slider') {
                 initSlider(dataPoint);
-            } else if (t === 'color') {
-                initColor(dataPoint);
             } else if (t === 'checkbox') {
-                $('#' + dataPoint.f).on('change', () => {
-                    g[currentBody.prefix + dataPoint.f] = g[currentBody.prefix + dataPoint.f]
+                $('#' + dataPoint.f).on('click', () => {
+                    g[currentBody.prefix + dataPoint.f] = !g[currentBody.prefix + dataPoint.f]
+                    $('#' + dataPoint.f).attr('data-value', g[currentBody.prefix + dataPoint.f])
                 })
             }
 
@@ -129,20 +142,12 @@ function initModal() {
 
 function openModal(body) {
     currentBody = body
-
+    $('.colorpickr-inline').remove()
     controls.enableRotate = false;
     universe.stopTime()
     $(gui.domElement).hide()
 
-    loopFields((dataP) => {
-        if (dataP.type != 'color') {
-            $('#' + dataP.f).attr('data-value', g[body.prefix + dataP.f])
-            $('#' + dataP.f).trigger('change')
-        } else {
-            $('#' + dataP.f).val(g[body.prefix + dataP.f]);
-            $('#colorPicker').colorpicker();
-        }
-    })
+    initColor()
 
     $('#modal-title').val(body.name)
 
@@ -155,6 +160,21 @@ function openModal(body) {
         opacity: 1,
         top: curPos,
     }, 500)
+
+    loopFields((dataP) => {
+        if (dataP.type === 'slider') {
+            $('#' + dataP.f).slider('setValue', g[body.prefix + dataP.f])
+        } else if (dataP.type === 'checkbox') {
+            let checkVal = $('#' + dataP.f).attr('data-value')
+            if (g[body.prefix + dataP.f] != checkVal) {
+                $('#' + dataP.f).addClass('checked')
+                $('#' + dataP.f).attr('data-value', g[currentBody.prefix + dataP.f])
+            }
+        } else {
+            $('#' + dataP.f).val(g[body.prefix + dataP.f]);
+            $('#colorPicker').colorpicker();
+        }
+    })
 }
 
 

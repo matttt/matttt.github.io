@@ -50,6 +50,7 @@ function init() {
   gui = new dat.gui.GUI()
   gui.remember(guiOpts)
   $(gui.domElement).css('opacity', 0)
+  gui.close()
   // gui.useLocalStorage = true
 
 
