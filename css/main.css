@@ -1,10 +1,35 @@
 .dg {
-  z-index: 0;
+    z-index: 0;
 }
 
 .sliderW {
-  width: 30%
+    width: 18%
 }
+
 #body-title {
-  width: 60%
+    width: 50%
+}
+
+.x .slider-selection {
+    background: #FF8282;
+}
+
+.x .slider-handle {
+    background: red;
+}
+
+.y .slider-selection {
+    background: #3a7b38;
+}
+
+.y .slider-handle {
+    background: green;
+}
+
+.z .slider-selection {
+    background: #8283FF;
+}
+
+.z .slider-handle {
+    border-bottom-color: blue;
 }

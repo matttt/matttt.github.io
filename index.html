@@ -2,80 +2,75 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.grid.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.slider.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.color.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/dat.gui.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/dat.gui.css">
+    <link rel="stylesheet" type="text/css" href="css/load.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
-  <!-- CSS Libraries -->
-  <link rel="stylesheet" type="text/css" href="css/jquery/j-ui.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.grid.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.slider.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.color.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap/dat.gui.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap/dat.gui.css">
-  <link rel="stylesheet" type="text/css" href="css/load.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-
-  <style>
-    body {
-      margin: 0px;
-      background-color: #000000;
-      overflow: hidden;
-    }
-  </style>
-  <script>
-    // iOS iframe auto-resize workaround
-    if (/(iPad|iPhone|iPod)/g.test(navigator.userAgent)) {
-      var scene = document.getElementById('scene');
-      scene.style.width = getComputedStyle(scene).width;
-      scene.style.height = getComputedStyle(scene).height;
-      scene.setAttribute('scrolling', 'yes');
-    }
-  </script>
+    <style>
+        body {
+            margin: 0px;
+            background-color: #000000;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        // iOS iframe auto-resize workaround
+        if (/(iPad|iPhone|iPod)/g.test(navigator.userAgent)) {
+            var scene = document.getElementById('scene');
+            scene.style.width = getComputedStyle(scene).width;
+            scene.style.height = getComputedStyle(scene).height;
+            scene.setAttribute('scrolling', 'yes');
+        }
+    </script>
 </head>
 
 
 <body>
-  <div id="load-wheel" class="cssload-container">
-    <div class="cssload-whirlpool"></div>
-  </div>
+    <div id="load-wheel" class="cssload-container">
+        <div class="cssload-whirlpool"></div>
+    </div>
 
-  <div id="modal-component"></div>
-  <!-- Libraries -->
-  <script src="libs/three/three.js"></script>
-  <script src="libs/three/three.click.js"></script>
-  <script src="libs/three/stats.js"></script>
-  <script src="libs/three/orbitcontrols.js"></script>
-  <script src="libs/three/dat.gui.js"></script>
-  <script src="libs/jquery/j.js"></script>
-  <script src="libs/jquery/j-ui.js"></script>
-  
-  <script src="libs/bootstrap/bootstrap.popper.js"></script>    
-  <script src="libs/bootstrap/bootstrap.min.js"></script>
-  <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="libs/bootstrap/bootstrap.slider.js"></script>
-  <script src="libs/colorpicker.js"></script>
-  
-  <!-- Utility -->
-  <script src="js/util/util.js"></script>
-  <script src="js/util/constants.js"></script>
-  <script src="js/util/handlers.js"></script>
-  <!-- UI -->
-  <script src="js/ui/guiOpts.ui.js"></script>
-  <script src="js/ui/3d.ui.js"></script>
-  <script src="js/ui/dat.ui.js"></script>
-  <script src="js/ui/modal.ui.js"></script>
-
-  <!-- Classes -->
-  <script src="js/classes/Physics.js"></script>
-  <script src="js/classes/Universe.js"></script>
-  <script src="js/classes/Sphere.js"></script>
-  <!-- Main Script -->
-  <script src="js/max.physics.js"></script>
-  <script src="js/max.js"></script>
-  <!-- Init Ui -->
-  <script src="js/util/three.setup.js"></script>
+    <div id="modal-component"></div>
+    <!-- Libraries -->
+    <script src="libs/three/three.js"></script>
+    <script src="libs/three/three.click.js"></script>
+    <script src="libs/three/stats.js"></script>
+    <script src="libs/three/orbitcontrols.js"></script>
+    <script src="libs/three/dat.gui.js"></script>
+    <script src="libs/jquery/j.js"></script>
+    <script src="libs/jquery/j-ui.js"></script>
+    <script src="libs/bootstrap/bootstrap.popper.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="libs/bootstrap/bootstrap.slider.js"></script>
+    <script src="libs/bootstrap/bootstrap.color.js"></script>
+    <!-- Utility -->
+    <script src="js/util/util.js"></script>
+    <script src="js/util/constants.js"></script>
+    <script src="js/util/handlers.js"></script>
+    <!-- UI -->
+    <script src="js/ui/guiOpts.ui.js"></script>
+    <script src="js/ui/3d.ui.js"></script>
+    <script src="js/ui/dat.ui.js"></script>
+    <script src="js/ui/modal.ui.js"></script>
+    <!-- Classes -->
+    <script src="js/classes/Physics.js"></script>
+    <script src="js/classes/Universe.js"></script>
+    <script src="js/classes/Sphere.js"></script>
+    <!-- Main Script -->
+    <script src="js/max.physics.js"></script>
+    <script src="js/max.js"></script>
+    <!-- Init Ui -->
+    <script src="js/util/three.setup.js"></script>
 
 </body>
 

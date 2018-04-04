@@ -69,7 +69,7 @@ let guiOpts = g = {
   type: 'three',
   trails: true,
   stars: false,
-  trailRate: 20,
+  trailRate: 25,
   restart: function () {
     universe.initBodies(g)
 
@@ -86,10 +86,8 @@ let guiOpts = g = {
   openMoon: function () {
     openModal(earth)
   },
-  start: function () {
-    universe.startTime()
+  toggleTime: function () {
+    universe.timeStopped = !universe.timeStopped
   },
-  stop: function () {
-    universe.stopTime()
-  }
+
 }

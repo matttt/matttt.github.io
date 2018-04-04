@@ -33,10 +33,14 @@ function handleCam() {
 
 function handleStars() {
   if (g.stars) {
-    universe.makeStars(2)
-
-    if (universe.starCount > 1000) universe.cleanStars(4);
+    if (universe.time % 2 === 0 && !universe.timeStopped) {
+      universe.makeStars(1)
+    }
+  } else {
+    for (let s in universe.stars) scene.remove(universe.stars.shift())
   }
+
+  if (universe.starCount > 500) universe.cleanStars(2);
 }
 
 function handleTrails() {

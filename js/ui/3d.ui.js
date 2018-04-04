@@ -4,7 +4,7 @@ function addText(text, pos, size, font) {
     font: font,
     size: size,
     height: 1000,
-    curveSegments: 3
+    curveSegments: 2
 
   });
 
