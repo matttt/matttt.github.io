@@ -1,19 +1,21 @@
 class Sphere {
-    constructor(posVec, radius, color) {
+    constructor(posVec, radius, color, name, lights) {
         this.pos = posVec
         this.radius = radius
         this.color = color
         this.trail = '#000000'
-        this.mesh = makeSphere(radius, this.posVec, this.color, 30)
+        this.mesh = makeSphere(radius, this.posVec, this.color, 30, lights)
         this.vel = vec()
         this.acc = vec()
-        this.count = 0
+        this.starCount = 0
         this.m = 1
         this.prefix = ''
-        this.name = ''
+        this.name = name || ''
         this.trailSpheres = []
         this.radold = 0
         this.enableLight = false
+
+        if (this.name) this.mesh.material.emissive = (new THREE.Color( color )).multiplyScalar(.7);
 
         this.mesh.__dirtyPosition = true
 
@@ -49,6 +51,8 @@ class Sphere {
         const dt = g.dt
 
         this.color = g[this.prefix + 'c']
+        if (this.name && universe.timeStopped) this.mesh.material.emissive = (new THREE.Color( this.color )).multiplyScalar(.7);
+
         this.mesh.material.color = new THREE.Color(this.color)
         this.m = this.baseMass * g[this.prefix + 'm'] * 1000
         this.trail = g[this.prefix + 'tc']
@@ -60,7 +64,7 @@ class Sphere {
             this.mesh.geometry = new THREE.SphereGeometry(g[this.prefix + 'r'], 30, 30)
         }
 
-        if (this.enableLight) {
+        if (this.enableLight && this.name === 'sun') {
             this.light.position.set(this.pos.x, this.pos.y, this.pos.z);
         }
 
@@ -79,18 +83,18 @@ class Sphere {
     leaveTrail() {
         let here = this
         if (g[this.prefix + 'et']) {
-            if (universe.timeStopped == false && (universe.time/2 % (31 - g.trailRate)) === 0) {
-                here.count++;
+            if (universe.timeStopped == false && (universe.time / 2 % (31 - g.trailRate)) === 0) {
+                here.starCount++;
                 let s = makeSphere(this.radius / 5, this.pos, this.trail, Math.round(this.radius / 750))
                 here.trailSpheres.push(s)
-                if (here.count > 500) {
-                    universe.scene.remove(here.trailSpheres.shift())
-                    here.count--;
+                if (here.starCount > TRAIL_COUNT_B4_DEL) {
+                    scene.remove(here.trailSpheres.shift())
+                    here.starCount--;
                 }
             }
-        } else {
-            this.count--
-                if (this.count > 500) universe.scene.remove(this.trailSpheres.shift())
+        } else if (this.starCount) {
+            this.starCount = 0;
+            scene.remove(this.trailSpheres.shift())
         }
     }
 

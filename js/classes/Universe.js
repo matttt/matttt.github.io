@@ -171,9 +171,17 @@ class Universe {
             let titlePos = TITLE.POS;
             let subTitlePos = TITLE.POS.clone().add(vec(0, -6000, 0));
 
-            titles.push(addText(TITLE.TEXT, titlePos, 20000, font))
-            titles.push(addText(TITLE.SUBTEXT, subTitlePos, 2000, font))
+            titles.push(addText(TITLE.TEXT, titlePos, 16384, font))
+            titles.push(addText(TITLE.SUBTEXT, subTitlePos, 8192, font))
         })
+    }
+
+    restart() {
+        this.initBodies(g)
+
+        let cp = camera.position
+        cp.set(0, 0, CAM_INIT_POS.z)
+        camera.lookAt(this.bodies[SUN].pos)
     }
 
     cleanStars(num) {
@@ -182,16 +190,16 @@ class Universe {
     }
 
     initBody(name, prefix, mass) {
-        let body = new Sphere(vec(g[prefix + 'x'], g[prefix + 'y'], g[prefix + 'z']), g[prefix + 'r'], g[prefix + 'c'])
+        let p = vec(g[prefix + 'x'], g[prefix + 'y'], g[prefix + 'z']);
+        let body = new Sphere(p, g[prefix + 'r'], g[prefix + 'c'], name, true)
         body.baseMass = xEtoY(mass[0], mass[1])
         body.vel = vec(g[prefix + 'vx'], g[prefix + 'vy'], g[prefix + 'vz'])
         body.acc = vec()
         body.m = xEtoY(mass[0], mass[1]) * g[prefix + 'm'] * 1000
         body.trail = g[prefix + 'tc']
         body.prefix = prefix
-        body.name = name
 
-        body.initLight()
+        if (name === 'sun') body.initLight()
 
         return body
     }
@@ -199,7 +207,7 @@ class Universe {
     initBodies(bodies, guiOpts) {
         this.clearScene()
 
-        sun = this.initBody('sun', 's', [6, 16])
+        sun = this.initBody('sun', 's', [6, 16])//mass in  x E y = x * 10 ^ y format
         earth = this.initBody('earth', 'e', [4, 14])
         moon = this.initBody('moon', 'm', [6, 8])
 

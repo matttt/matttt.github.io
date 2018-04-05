@@ -1,35 +1,33 @@
-function addText(text, pos, size, font) {
-  var geo = new THREE.TextGeometry(text, {
+function addText(text, pos, rsize, font) {
+  var canvas = document.createElement('canvas');
+  var size = 1000; // CHANGED
+  canvas.width = rsize/8;
+  canvas.height = rsize/4;
+  var context = canvas.getContext('2d');
+  context.fillStyle = '#FFFFFA'; // CHANGED
+  context.textAlign = 'center';
+  context.font = '800px Arial';
+  context.fillText(text, canvas.width / 2, canvas.height / 2);
+  context.fillStyle = '#E56399'; // CHANGED  
+  context.textAlign = 'center';
+  context.font = '850px Arial';
+  context.fillText(text, size / 2, size / 2);
 
-    font: font,
-    size: size,
-    height: 1000,
-    curveSegments: 2
+  var amap = new THREE.Texture(canvas);
+  amap.needsUpdate = true;
 
+  var mat = new THREE.SpriteMaterial({
+    map: amap,
+    transparent: false,
+    color: 0xffffff // CHANGED
   });
 
-  geo.computeBoundingBox();
-
-  var centerOffset = -0.5 * (geo.boundingBox.max.x - geo.boundingBox.min.x);
-
-  var materials = [
-    new THREE.MeshBasicMaterial({ color: 0xFFFFFA, overdraw: 0.5 }),
-    new THREE.MeshBasicMaterial({ color: 0xE56399, overdraw: 0.5 })
-  ];
-
-  materials[0].transparent = true;
-  materials[1].transparent = true;
-
-  var mesh = new THREE.Mesh(geo, materials);
-
-  mesh.__dirtyPosition = true
-
-  mesh.position.x = centerOffset + pos.x;
-  mesh.position.y = pos.y;
-  mesh.position.z = pos.z;
-  mesh.centerOffset = centerOffset
-
-  scene.add(mesh)
-
-  return mesh
+  var sp = new THREE.Sprite(mat);
+  sp.scale.set(rsize, rsize, 1000); // CHANGED
+  console.log(pos)  
+  sp.position.set(pos.x, pos.y, pos.z); // CHANGED
+ 
+    scene.add(sp);
+    console.log(sp.position)
+  return sp
 }

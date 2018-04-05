@@ -16,10 +16,8 @@ function handleText() {
       fadeUp = ((universe.time - 200) / 200 * 1000)
       fadeOut = - ((universe.time - 200) / 200 * 500)
 
-      titles[0].material[0].opacity = 1 - ((universe.time - 300) / 100)
-      titles[0].material[1].opacity = 1 - ((universe.time - 300) / 100)
-      titles[1].material[0].opacity = 1 - ((universe.time - 300) / 100)
-      titles[1].material[1].opacity = 1 - ((universe.time - 300) / 100)
+      titles[0].material.opacity = 1 - ((universe.time - 300) / 100)
+      titles[1].material.opacity = 1 - ((universe.time - 300) / 100)
     } else if (universe.time > 1000) {
       for (let title of titles) scene.remove(title)
     }

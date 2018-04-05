@@ -26,10 +26,16 @@ function vecMultC(p0, c) {
   return vec(p0.x * c, p0.y * c, p0.z * c)
 }
 
-function makeSphere(r_, p_, c_, g_) {
+function makeSphere(r_, p_, c_, g_, l_) {
   let p = p_ || vec()
   var geometry = new THREE.SphereGeometry(r_, g_ || 50, g_ || 50)
-  var material = new THREE.MeshBasicMaterial({ color: c_ })
+  var material;
+
+  if (l_) {
+    material = new THREE.MeshLambertMaterial({ color: c_ })
+  } else {
+    material = new THREE.MeshBasicMaterial({ color: c_ })
+  }
 
   mesh = new THREE.Mesh(geometry, material)
 

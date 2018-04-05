@@ -77,7 +77,9 @@ function initSlider(d) {
             tooltip: 'show'
         })
         .data('slider')
-        .on('slide', updateData)
+        .on('slide', ()=> {
+            g[currentBody.prefix + d.f] = $('#' + d.f).attr('data-value')
+        })
 
     fieldElems.push(f)
 }
@@ -105,9 +107,7 @@ function initColor(d, c) {
 function onModalHide() {
     $('.mainmodal').on('hidden.bs.modal', function (e) {
         controls.enableRotate = true
-        $(gui.domElement).show(1000, function () {
-            universe.startTime()
-        })
+        universe.startTime()
 
         $('.colorpickr-inline').remove()
     })
@@ -131,8 +131,7 @@ function initModal() {
                 initSlider(dataPoint);
             } else if (t === 'checkbox') {
                 $('#' + dataPoint.f).on('click', () => {
-                    g[currentBody.prefix + dataPoint.f] = !g[currentBody.prefix + dataPoint.f]
-                    $('#' + dataPoint.f).attr('data-value', g[currentBody.prefix + dataPoint.f])
+                    g[currentBody.prefix + dataPoint.f] = $('#' + dataPoint.f).is(':checked')
                 })
             }
 
@@ -145,7 +144,6 @@ function openModal(body) {
     $('.colorpickr-inline').remove()
     controls.enableRotate = false;
     universe.stopTime()
-    $(gui.domElement).hide()
 
     initColor()
 
@@ -165,11 +163,7 @@ function openModal(body) {
         if (dataP.type === 'slider') {
             $('#' + dataP.f).slider('setValue', g[body.prefix + dataP.f])
         } else if (dataP.type === 'checkbox') {
-            let checkVal = $('#' + dataP.f).attr('data-value')
-            if (g[body.prefix + dataP.f] != checkVal) {
-                $('#' + dataP.f).addClass('checked')
-                $('#' + dataP.f).attr('data-value', g[currentBody.prefix + dataP.f])
-            }
+            $('#' + dataP.f).prop('checked', g[body.prefix + dataP.f])
         } else {
             $('#' + dataP.f).val(g[body.prefix + dataP.f]);
             $('#colorPicker').colorpicker();
@@ -178,15 +172,10 @@ function openModal(body) {
 }
 
 
-
-function updateData() {
-    loopFields((dataP) => {
-        if (dataP.type != 'color') {
-            g[currentBody.prefix + dataP.f] = $('#' + dataP.f).attr('data-value')
-        }
-    })
-}
-
 $('body').keypress((e) => {
-    if (e.which === 32) universe.timeStopped = !universe.timeStopped
+    if (e.which === 32) { //enter
+        universe.timeStopped = !universe.timeStopped
+    } else if (e.which === 114) { //r
+        universe.restart()
+    }
 })

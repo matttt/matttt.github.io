@@ -71,11 +71,7 @@ let guiOpts = g = {
   stars: false,
   trailRate: 25,
   restart: function () {
-    universe.initBodies(g)
-
-    let cp = camera.position
-    cp.set(0, 0, CAM_INIT_POS.z)
-    camera.lookAt(sun.pos)
+    universe.restart()
   },
   openSun: function () {
     openModal(sun)

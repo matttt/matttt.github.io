@@ -19,26 +19,30 @@
     font-size: 8px;
 }
 
-.x .slider-selection {
+.x.slider-selection {
     background: #FF8282;
 }
 
-.x .slider-handle {
+.x.slider-handle {
     background: red;
 }
 
-.y .slider-selection {
+.y.slider-selection {
     background: #3a7b38;
 }
 
-.y .slider-handle {
+.y.slider-handle {
     background: green;
 }
 
-.z .slider-selection {
+.z.slider-selection {
     background: #8283FF;
 }
 
-.z .slider-handle {
+.z.slider-handle {
     border-bottom-color: blue;
 }
+
+.slider:hover > * { opacity: 1 !important; } 
+
+.dg {height: 100% !important}

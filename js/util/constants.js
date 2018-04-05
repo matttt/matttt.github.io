@@ -16,3 +16,6 @@ const TITLE = {
 }
 const CAM_INIT_POS = vec(0, 0, 30000)
 const CAM_SCOOCH_AMOUNT = 50000
+
+//draw
+const TRAIL_COUNT_B4_DEL = 300

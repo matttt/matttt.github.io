@@ -13,33 +13,38 @@ function init() {
 
   controls = new THREE.OrbitControls(camera)
 
+  var light = new THREE.AmbientLight(0x404040, .2); // soft white light
+  scene.add(light);
+
   controls.enableDamping = true
   controls.autoRotate = false
   controls.rotateSpeed = .05
   controls.dampingFactor = .03
 
-  var dir = new THREE.Vector3( 1, 2, 0 );
+  var dir = new THREE.Vector3(1, 2, 0);
 
   //normalize the direction vector (convert to vector of length 1)
   dir.normalize();
-  
-  var origin = new THREE.Vector3( 0, 0, 0 );
+
+  var origin = new THREE.Vector3(0, 0, 0);
   var length = 50000;
   var hex = 0xffffff;
-  
-  var arrowHelper = new THREE.ArrowHelper( dir, origin, length, hex );
+
+  var arrowHelper = new THREE.ArrowHelper(dir, origin, length, hex);
   arrowHelper.headWidth = 10000;
-  scene.add( arrowHelper );
+  scene.add(arrowHelper);
 
   stats = new Stats();
   stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
   stats.domElement.style.display = 'none'
   document.body.appendChild(stats.dom);
 
-  renderer = new THREE.WebGLRenderer({antialias: true})
+  renderer = new THREE.WebGLRenderer({
+    antialias: true
+  })
   renderer.setPixelRatio(window.devicePixelRatio)
   renderer.setSize(window.innerWidth, window.innerHeight)
-  
+
   // let container = document.createElement('div')
   // container.appendChild(renderer.domElement)
 
@@ -75,11 +80,8 @@ function animate() {
   controls.update()
   renderer.render(scene, camera)
 
-	stats.end();
+  stats.end();
 
   requestAnimationFrame(animate)
- 
+
 }
-
-
-

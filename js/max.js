@@ -28,11 +28,13 @@ function projectInit() {
     universe = new Universe(scene)
 
     universe.initBodies(guiOpts)
-    universe.drawTitle()
+    // universe.drawTitle()
     universe.beginTime(physLoop)
 
     g.stars = false
 
     if (g.stars) universe.makeStars(50)
+
+    
 
 }
