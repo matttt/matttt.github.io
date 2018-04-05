@@ -2,12 +2,19 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <div id="body-title" class="input-group input-group-lg">
-                    <input type="text" id="modal-title" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                <div class="input-group input-group-lg" style="width: 30%">
+                    <input style="background-color: rgba(255,255,255,.2); height: 60%; color: white" type="text" id="modal-title" class="form-control" aria-label="Large"
+                        aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-lg mb-4" style="width: 30%; margin-left: 20%">
+                    <select id="body-select" class="custom-select" aria-label="Large"
+                    aria-describedby="inputGroup-sizing-sm" style="height: 60%; background-color: rgba(255,255,255,.2); color: white" id="inputGroupSelect01" class="form-control">
+                        <option selected>Choose body...</option>
+                    </select>
                 </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <!-- ['x', 'y', 'z', 'vx', 'vy', 'vz', 'r', 'm', 'et', 'el', 'c', 'tc'] -->
             <!-- Body Input Model -->
@@ -18,13 +25,15 @@
                         <div class="col-md-3 x">
                             <p>
                                 <b>x</b>
-                                <input type="text" class="span2 sliderW x"  data-slider-min="-50000" data-slider-max="50000" data-slider-step="100" id="x" data-slider-id='xc' data-slider-handle="round" />
+                                <input type="text" class="span2 sliderW x" data-slider-min="-50000" data-slider-max="50000" data-slider-step="100" id="x"
+                                    data-slider-id='xc' data-slider-handle="round" />
                             </p>
                         </div>
                         <div class="col-md-6 ml-auto">
                             <p>
                                 <b>vx</b>
-                                <input type="text" class="span2 sliderW x"  data-slider-min="-500" data-slider-max="500" data-slider-step="10" data-slider-id="vxc" id="vx" data-slider-id='xc' data-slider-handle="square" />
+                                <input type="text" class="span2 sliderW x" data-slider-min="-500" data-slider-max="500" data-slider-step="10" data-slider-id="vxc"
+                                    id="vx" data-slider-id='xc' data-slider-handle="square" />
                             </p>
                         </div>
                     </div>
@@ -33,13 +42,15 @@
                         <div class="col-md-3">
                             <p>
                                 <b>y</b>
-                                <input type="text" class="span2 sliderW y"  data-slider-min="-50000" data-slider-max="50000" data-slider-step="100" id="y" data-slider-id='yc' data-slider-handle="round" />
+                                <input type="text" class="span2 sliderW y" data-slider-min="-50000" data-slider-max="50000" data-slider-step="100" id="y"
+                                    data-slider-id='yc' data-slider-handle="round" />
                             </p>
                         </div>
                         <div class="col-md-6 ml-auto">
                             <p>
                                 <b>vy</b>
-                                <input type="text" class="span2 sliderW y"  data-slider-min="-500" data-slider-max="500" data-slider-step="10" data-slider-id="vyc" id="vy" data-slider-handle="square" />
+                                <input type="text" class="span2 sliderW y" data-slider-min="-500" data-slider-max="500" data-slider-step="10" data-slider-id="vyc"
+                                    id="vy" data-slider-handle="square" />
                             </p>
                         </div>
                     </div>
@@ -48,13 +59,15 @@
                         <div class="col-md-3">
                             <p>
                                 <b>z</b>
-                                <input type="text" class="span2 sliderW"  data-slider-min="-50000" data-slider-max="50000" data-slider-step="100" data-slider-id="zc" id="z" data-slider-handle="round" />
+                                <input type="text" class="span2 sliderW" data-slider-min="-50000" data-slider-max="50000" data-slider-step="100" data-slider-id="zc"
+                                    id="z" data-slider-handle="round" />
                             </p>
                         </div>
                         <div class="col-md-6 ml-auto">
                             <p>
                                 <b>vz</b>
-                                <input type="text" class="span2 sliderW z"  data-slider-min="-500" data-slider-max="500" data-slider-step="10" data-slider-id="vzc" id="vz" data-slider-handle="square" />
+                                <input type="text" class="span2 sliderW z" data-slider-min="-500" data-slider-max="500" data-slider-step="10" data-slider-id="vzc"
+                                    id="vz" data-slider-handle="square" />
                             </p>
                         </div>
                     </div>
@@ -63,13 +76,15 @@
                         <div class="col-md-4">
                             <p>
                                 <b>m</b>
-                                <input type="text" class="span2 sliderW"  data-slider-min=".25" data-slider-max="5" data-slider-step=".25" data-slider-id="mSlider" id="m" data-slider-handle="round" />
+                                <input type="text" class="span2 sliderW" data-slider-min="0.25" data-slider-max="5" data-slider-step="0.25" data-slider-id="mSlider"
+                                    id="m" data-slider-handle="round" />
                             </p>
                         </div>
                         <div class="col-md-6 ml-auto">
                             <p>
                                 <b>r</b>
-                                <input type="text" class="span2 sliderW"  data-slider-min="1" data-slider-max="10000" data-slider-step="100" data-slider-id="rSlider " id="r" data-slider-handle="round" />
+                                <input type="text" class="span2 sliderW" data-slider-min="1" data-slider-max="10000" data-slider-step="100" data-slider-id="rSlider "
+                                    id="r" data-slider-handle="round" />
                             </p>
                         </div>
                     </div>
@@ -78,13 +93,13 @@
                         <div class="col-md-4">
                             <p>
                                 <b>Enable Trails</b>
-                                <input id='et'  type="checkbox" data-value="false" />
+                                <input id='et' type="checkbox" data-value="false" />
                             </p>
                         </div>
                         <div class="col-md-6 ml-auto">
                             <p>
                                 <b>Enable Light</b>
-                                <input id='el'   type="checkbox" data-value="false" />
+                                <input id='el' type="checkbox" data-value="false" />
                             </p>
                         </div>
                     </div>

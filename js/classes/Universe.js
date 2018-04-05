@@ -177,6 +177,7 @@ class Universe {
     }
 
     restart() {
+        this.time = 0
         this.initBodies(g)
 
         let cp = camera.position

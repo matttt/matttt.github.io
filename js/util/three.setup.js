@@ -11,16 +11,8 @@ function init() {
 
   scene = new THREE.Scene()
 
-  controls = new THREE.OrbitControls(camera)
-
   var light = new THREE.AmbientLight(0x404040, .2); // soft white light
   scene.add(light);
-
-  controls.enableDamping = true
-  controls.autoRotate = false
-  controls.rotateSpeed = .05
-  controls.autoRotateSpeed = .1
-  controls.dampingFactor = .03
 
   var dir = new THREE.Vector3(1, 2, 0);
 
@@ -45,6 +37,13 @@ function init() {
   })
   renderer.setPixelRatio(window.devicePixelRatio)
   renderer.setSize(window.innerWidth, window.innerHeight)
+
+  controls = new THREE.OrbitControls(camera, renderer.domElement)
+  controls.enableDamping = true
+  controls.autoRotate = false
+  controls.rotateSpeed = .05
+  controls.autoRotateSpeed = .1
+  controls.dampingFactor = .03
 
   // let container = document.createElement('div')
   // container.appendChild(renderer.domElement)

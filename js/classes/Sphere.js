@@ -49,6 +49,7 @@ class Sphere {
 
     update() {
         const dt = g.dt
+        let self = this
 
         this.color = g[this.prefix + 'c']
         if (this.name && universe.timeStopped) this.mesh.material.emissive = (new THREE.Color( this.color )).multiplyScalar(.7);
@@ -59,6 +60,15 @@ class Sphere {
         this.radius = g[this.prefix + 'r']
         this.enableLight = g[this.prefix + 'el']
         this.mesh.position.set(this.pos.x, this.pos.y, this.pos.z)
+
+
+        if (universe.timeStopped && universe.time === 0) {
+            let xP = g[self.prefix + 'x']
+            let yP = g[self.prefix + 'y']
+            let zP = g[self.prefix + 'z']
+
+            self.mesh.position.set(xP, yP, zP)
+        }
 
         if (this.radold != this.radius) {
             this.mesh.geometry = new THREE.SphereGeometry(g[this.prefix + 'r'], 30, 30)

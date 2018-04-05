@@ -151,6 +151,12 @@ function openModal(body) {
 
     $('#modal-title').val(body.name)
 
+    $('#body-select option.bodi').remove()
+
+    $.each(universe.bodies, function() {
+        $('#body-select').append($('<option class="bodi" />').val(this.name).text(this.name));
+    });
+
     let modal = $('#body-modal')
     modal.modal();
     let curPos = modal.css('top')
@@ -173,6 +179,17 @@ function openModal(body) {
     })
 }
 
+
+$('body').on('change', '#body-select', function() {
+    let body = universe.bodies.find((b) => {
+        return b.name === $('#body-select').val();
+    })
+    console.log(body)
+
+    openModal(body)
+})
+
+//ew jus some key 
 
 $('body').keypress((e) => {
     if (e.which === 32) { //enter

@@ -39,6 +39,10 @@
     background: #8283FF !important;
 }
 
+.modaldialog {
+    opacity: .5;
+}
+
 #zc .slider-handle {
     border-bottom-color: blue !important;
 }
