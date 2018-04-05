@@ -78,7 +78,7 @@ function initSlider(d) {
         })
         .data('slider')
         .on('slide', ()=> {
-            g[currentBody.prefix + d.f] = $('#' + d.f).attr('data-value')
+            g[currentBody.prefix + d.f] = Number($('#' + d.f).attr('data-value'))
         })
 
     fieldElems.push(f)
@@ -107,6 +107,7 @@ function initColor(d, c) {
 function onModalHide() {
     $('.mainmodal').on('hidden.bs.modal', function (e) {
         controls.enableRotate = true
+        controls.autoRotate = false
         universe.startTime()
 
         $('.colorpickr-inline').remove()
@@ -143,6 +144,7 @@ function openModal(body) {
     currentBody = body
     $('.colorpickr-inline').remove()
     controls.enableRotate = false;
+    controls.autoRotate = true
     universe.stopTime()
 
     initColor()

@@ -19,6 +19,7 @@ function init() {
   controls.enableDamping = true
   controls.autoRotate = false
   controls.rotateSpeed = .05
+  controls.autoRotateSpeed = .1
   controls.dampingFactor = .03
 
   var dir = new THREE.Vector3(1, 2, 0);
