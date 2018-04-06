@@ -38,9 +38,9 @@ function init() {
   renderer.setPixelRatio(window.devicePixelRatio)
   renderer.setSize(window.innerWidth, window.innerHeight)
 
-  controls = new THREE.OrbitControls(camera, renderer.domElement)
+  controls = new THREE.OrbitControls(camera, document.body)
   controls.enableDamping = true
-  controls.autoRotate = false
+  controls.rotate = true
   controls.rotateSpeed = .05
   controls.autoRotateSpeed = .1
   controls.dampingFactor = .03
