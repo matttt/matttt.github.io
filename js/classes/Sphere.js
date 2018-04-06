@@ -93,7 +93,7 @@ class Sphere {
     leaveTrail() {
         let here = this
         if (g[this.prefix + 'et']) {
-            if (universe.timeStopped == false && (universe.time / 2 % (31 - g.trailRate)) === 0) {
+            if (universe.timeStopped == false && (Math.floor(universe.time / 2) % (30 - g.trailRate)) === 0) {
                 here.starCount++;
                 let s = makeSphere(this.radius / 5, this.pos, this.trail, Math.round(this.radius / 750))
                 here.trailSpheres.push(s)
