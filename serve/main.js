@@ -7,7 +7,7 @@ app.listen(3000)
 console.log("server listening on port 3000")
 
 app.use('/', (req, res, next) => {
-  express.static("/Users/matthewmartori/Dropbox/max_phys")(req, res, next);
+  express.static("..")(req, res, next);
 })
 
 open("http://localhost:3000");
