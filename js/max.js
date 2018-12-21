@@ -31,7 +31,7 @@ function projectInit() {
     // universe.drawTitle()
     universe.beginTime(physLoop)
 
-    g.stars = false
+    g.stars = true
 
     if (g.stars) universe.makeStars(50)
 
