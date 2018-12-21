@@ -68,7 +68,7 @@ let guiOpts = g = {
 
   type: 'three',
   trails: true,
-  stars: false,
+  stars: true,
   trailRate: 25,
   restart: function () {
     universe.restart()
