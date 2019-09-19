@@ -64,36 +64,36 @@ class Universe {
         let g_ = here.processInput()
         let bodies = here.getCleanBodyArr()
 
-        here.worker.postMessage({
-            bodies: bodies,
-            g: g_
-        });
+    
         here.timeTick();
     }
 
-    startWorker(e) {
+    startWorker() {
         let here = this
-        let forces = e.data.forces
+        // let forces = e.data.forces
 
-        physLoop(forces)
+        
         this.timeStopped = false
 
-        let g_ = here.processInput()
+        
         let bodies = here.getCleanBodyArr()
 
         function tryTick() {
-            setTimeout(() => {
+
+            
+
                 if (here.timeStopped === false) {
                     here.timeTick()
-                    here.worker.postMessage({
-                        bodies: bodies,
-                        g: g_
-                    });
-                } else {
-                    tryTick()
-                }
+                    let bodies = here.bodies;
+                    let g_ = here.processInput()
+                    let forces = Physics.calcForces(bodies, g)
 
-            }, BASE_PHYS_TICK / g.dt)
+                    physLoop(forces, g_)
+
+                } 
+
+                window.requestAnimationFrame(tryTick)
+
         }
 
         tryTick()
@@ -101,16 +101,18 @@ class Universe {
 
     beginTime(func) {
         let here = this
+        here.startWorker()
 
-        if (!this.worker) this.worker = new Worker('js/util/physics_worker.js');
+        setTimeout(here.revealUi.bind(this, here), 1000)
+        // if (!this.worker) this.worker = new Worker('js/util/physics_worker.js');
 
-        this.worker.onmessage = function (e) {
-            if (e.data.started === true) {
-                setTimeout(here.revealUi.bind(this, here), 1000)
-            } else {
-                here.startWorker(e)
-            }
-        }
+        // this.worker.onmessage = function (e) {
+        //     if (e.data.started === true) {
+        //         
+        //     } else {
+        //         
+        //     }
+        // }
     }
 
 

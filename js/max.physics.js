@@ -1,4 +1,4 @@
-function physLoop(forces) {
+function physLoop(forces, g) {
   //physics stuffz... runs at 120fps
 
   if (universe.time > 0) {
@@ -10,7 +10,7 @@ function physLoop(forces) {
   earth.applyForce(forces[EARTH])
   moon.applyForce(forces[MOON])
 
-  sun.updatePhys()
-  earth.updatePhys()
-  moon.updatePhys()
+  sun.updatePhys(g)
+  earth.updatePhys(g)
+  moon.updatePhys(g)
 }

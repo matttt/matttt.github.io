@@ -19,7 +19,7 @@ function initUi() {
     gui.add(g, 'restart')
     gui.add(g, 'toggleTime').name('start/stop time')
     gui.add(g, 'gravity').min(.1).max(10).step(0.1)
-    gui.add(g, 'dt').min(.5).max(3).step(0.05)
+    // gui.add(g, 'dt').min(.5).max(3).step(0.05)
 
     buildFolder('Sun', 's')
     buildFolder('Earth', 'e')

@@ -82,7 +82,7 @@ class Sphere {
 
     }
 
-    updatePhys() {
+    updatePhys(g) {
         if (universe.time > 0) {
             this.vel = this.vel.clone().add(vecMultC(this.acc, FORCE_SCALAR))
             this.pos = this.pos.clone().add(this.vel)
