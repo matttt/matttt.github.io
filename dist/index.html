@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .frameStyle {
+      position: fixed;
+      /* border: 1px black solid; */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .fullStyle {
+      /* position: fixed; */
+      /* border: 1px black solid; */
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  </style>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>mateo's sotu </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/spin.css">
+  <link rel="stylesheet" type="text/css" href="css/dialog-polyfill.css">
+</head>
+
+<body>
+
+  
+  <div class="sk-chase" id="loadingSpin" style="left: 48vw; top: 30vh; position: absolute">
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+  </div>
+
+  <!-- <div style="height: 1080px" id="fullScreener">
+    <div id="frame" class="frameStyle"></div>
+  </div> -->
+
+
+  <div id="frame" style="visibility: hidden;" class="frameStyle"></div>
+  <!-- <div id="frame" style="display: none;" class="frameStyle"></div> -->
+
+
+  <dialog class="my-modal" style="font-family: 'Roboto', sans-serif;" id="modal">
+    <!-- <progress max="100" value="0"></progress> -->
+    <h1 id="title" style="position: absolute; top: 0%">Scale of the Universe</h1>
+    <div class="wrapper" id="langWrapper">
+      <button class="box a" onclick="setLang('a', 0)">English (US)</button>
+      <button class="box b" onclick="setLang('b', 3)">English (British)</button>
+      <button class="box c" onclick="setLang('c', 10)">中文 (简体)</button>
+      <button class="box d" onclick="setLang('d', 3)">中文</button>
+      <button class="box e" onclick="setLang('e', 8)">Español</button>
+      <button class="box f" onclick="setLang('f', 15)">العربية</button>
+      <button class="box g" onclick="setLang('g', 6)">Português</button>
+      <button class="box h" onclick="setLang('h', 9)">Deustsch</button>
+      <button class="box i" onclick="setLang('i', 11)">Français</button>
+      <button class="box j" onclick="setLang('j', 16)">한국어</button>
+      <button class="box k" onclick="setLang('k', 19)">Türkçe</button>
+      <button class="box l" onclick="setLang('l', 7)">Polski</button>
+      <button class="box m" onclick="setLang('m', 18)">فارسی</button>
+      <button class="box n" onclick="setLang('n', 14)">Українська</button>
+      <button class="box o" onclick="setLang('o', 13)">Româna</button>
+      <button class="box p" onclick="setLang('p', 5)">Nederlands</button>
+      <button class="box q" onclick="setLang('q', 6)">Svenska</button>
+      <button class="box r" onclick="setLang('r', 5)">unknown</button>
+      <button class="box s" onclick="setLang('s', 12)">Esperanto</button>
+      <button class="box t" onclick="setLang('t', 17)">Eesti</button>
+    </div>
+
+    
+  </dialog>
+
+
+  <script src="js/loading-bar.min.js"></script>
+  <script src="js/bundle.js"></script>
+</body>
+
+</html>
