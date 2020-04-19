@@ -1,4 +1,4 @@
-LCD Pikseli
+tx=LCD Pikseli
 Piksellerin boyutlarý birbirinden farklý olsa da, ortalama 300 mikro-metre kadardýr. Her bir piksel, kýrmýzý, yeþil ve mavi renkli üç alt pikselden oluþur. Pikseller oldukça güzeldir, ama vokseller daha iyidir. Onlar üç boyutlu piksellerdir.
 Palm Jebel Ali
 Palm Jebel Ali en büyük insan-yapýmý adadýr (Holldanda’da suyu alýnarak daha fazla toprak kazanýlan Flevopolder gibi adalar dýþýnda). Palm Jebel Ali henüz tamamlanmadý. Palm Adalarý’nýn bir parçasý olan burada 250,000 kiþinin yaþamasý planlanýyor!
@@ -617,3 +617,9 @@ peta
 exa
 zetta
 yotta
+Evren Ölçeði 2
+Yakýnlaþmak ve uzaklaþmak için kaydýrma çubuðunu kullanýn.
+Nesneler hakkýnda ayrýntýlý bilgi için üzerlerine týklayýn.
+Çeviri: Arif Solmaz
+Türkçe
+Turkish
