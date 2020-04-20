@@ -1,5 +1,5 @@
-LCD Pixel
-Although the size of pixels differs greatly, 300 micrometres is about the average.  Pixels contain three subpixels that are red, green, and blue.  Pixels are pretty cool, but voxels are even better.  They are three-dimensional pixels.
+tx=LCD Pixel
+Although the size of pixels differs greatly, 300 micrometers is about the average.  Pixels contain three subpixels that are red, green, and blue.  Pixels are pretty cool, but voxels are even better.  They are three-dimensional pixels.
 Palm Jebel Ali
 Palm Jebel Ali is the largest man-made island (not including islands like Flevopolder, where a region of the Netherlands was drained so there could be more land).  Palm Jebel Ali is not complete.  It is part of thePalm Islands and is planned to house 250,000 people!
 Neutrino
@@ -13,13 +13,13 @@ The chicken egg is where baby chicks usually hatch.  Many humans love to eat chi
 Quail Egg
 Many people think that quail eggs are better than chicken eggs.  The quail egg is smaller and more rare than the chicken egg, but that doesn't stop some people from loving them!
 Square Inch
-If you aren't accustomed to the metric system, here's a square inch.  Unfortunately for you, almost everything else is in the metric system.  Also, 2.5 centimetres is the length of one side, not the area.  (That would be in cm^2.)
+If you aren't accustomed to the metric system, here's a square inch.  Unfortunately for you, almost everything else is in the metric system.  Also, 2.5 centimeters is the length of one side, not the area.  (That would be in cm^2.)
 Coffee Bean
-The coffee bean is about one centimetre across - and it's actually a fruit that resembles a bean.  It's brown and has stripes, and sometimes, when you stare at it, you just  forget that its diameter is 10^-29 of the known universe.
+The coffee bean is about one centimeter across - and it's actually a fruit that resembles a bean.  It's brown and has stripes, and sometimes, when you stare at it, you just  forget that its diameter is 10^-29 of the known universe.
 Common Earthworm
 Don't you just love wriggly, slimy earthworms?  Despite the urban legends, most species of earthworms will die if you cut them in half.  Sometimes, the head will survive and grow a new tail.
 Rigel
-Rigel is a blazing blue star, and  the brightest star in the constellation of Orion. It lies near the equator, so it is visible from almost anywhere on Earth.  Also, don't call it "wriggle", because it's pronounced like "rye-jel".
+Rigel is a blazing blue star, and  the brightest star in the constellation of Orion. It lies near the equator, so it is visible from almost anywhere on Earth.  Also, don't call it "wriggle" because it's pronounced like "rye-jel".
 United States of America
 Here is the U. S. A.  Although it may seem to be larger than Pluto, Pluto has a back face, which means Pluto has more surface area!
 Earth
@@ -35,13 +35,13 @@ Aldebaran is not to be confused with Alderaan, which is a planet in Star Wars. A
 Pollux
 In Greek mythology, Pollux's twin is Castor.  They are also stars in the constellation Gemini, meaning "twins".  However, in reality, Pollux in a single star, while Castor is three binary stars, for a total of six stars.  Castor is a set of sextuplets!
 Arcturus
-Arcturus is the third brightest star in the night sky, after Sirius and Canopus.  It's the brightest star in the constellation of Boötes.  Find it by following the handle of the Big Dipper.
+Arcturus is the third brightest star in the night sky, after Sirius and Canopus.  It's the brightest star in the constellation of Bo�tes.  Find it by following the handle of the Big Dipper.
 The Sun
 Also known as Sol, the Sun is what gives Earth the energy that makes it able to have life.  The Sun is over 100 times larger in diameter than  Earth!  20,000 times more solar energy hits the Earth than the human race uses.
 Alpha Centauri A
 Alpha Centauri A is the largest star of the Alpha Centauri star system (composed of three stars), which is the closest star system to us.  It is also the fourth brightest star in the night sky.
 Alpha Centauri B
-Alpha Centauri B is the second largest star in the Alpha Centauri star system.  Its diameter is approximately one million kilometres, so it is slightly smaller than the Sun.  Alpha Centuari A & B are so close they appear as a single star to us Earthlings.
+Alpha Centauri B is the second largest star in the Alpha Centauri star system.  Its diameter is approximately one million kilometers, so it is slightly smaller than the Sun.  Alpha Centuari A %26 B are so close they appear as a single star to us Earthlings.
 Proxima Centauri
 Proxima Centauri is known as being the closest star  to Earth other than the Sun.  Its name comes from the word "proximity".  Proxima Centauri is a small red star.  Unfortunately, it is so dim, you need a telescope to see it.
 Sirius A
@@ -51,7 +51,7 @@ Sirius B is a white dwarf.  It's barely bigger than the Earth!  It's usually pre
 Vega
 Vega is found in the Lyra constellation.  It is also part of the Summer Triangle, composed of Vega, Altair, and Deneb.  Vega spins so quickly it bulges.  However, we see it pole-on, so it looks circular.
 Regulus
-Regulus spins so quickly it bulges, just like Altair and Vega.  If Regulus were to spin 16% faster, it would rip apart!  Regulus is also the brightest star in the constellation Leo.  There's also Regulus B & C.
+Regulus spins so quickly it bulges, just like Altair and Vega.  If Regulus were to spin 16%25 faster, it would rip apart!  Regulus is also the brightest star in the constellation Leo.  There's also Regulus B %26 C.
 Spica
 Spica is the fifteenth brightest star in the night sky and lies in the constellation Virgo.  It's actually a binary star system.  The two stars are very close, and they orbit every four days.
 Alnitak
@@ -59,11 +59,11 @@ Alnitak illuminates the Flame Nebula.  Alnitak is also the easternmost star of t
 Gacrux
 'Gacrux can be found in the constellation Crux.  Crux, which means "cross" in Latin, is known as the Southern Cross.  Gacrux is a binary star.  The largest of the two is a red giant.',
 Uranus
-'A lot of people like to think "Uranus" sounds like "your anus".  There are many other, and better, pronunciations.  Uranus can also be pronouced like "Yer-uh-niss" or "Seh-venth-pla-net".',
+'A lot of people like to think "Uranus" sounds like "your anus.  There are many other, and better, pronunciations.  Uranus can also be pronouced like "Yer-uh-niss" or "Seh-venth-pla-net.',
 Neptune
 Currently, Neptune is the farthest planet in the Solar System from the Sun.  It takes 164.8 Earth years for it to orbit the Sun.  You'll never see Neptune complete a single orbit in your whole life, unless life expectancies increase.
 Wolf 359
-Wolf 359 is a small red dwarf, dwarfed by normal stars.  It is the sixth closest star to Earth, after the Sun, Proxima Centauri, Alpha Centauri A & B and Barnard's star.  Still, its magnitude is a dim +13.5.
+Wolf 359 is a small red dwarf, dwarfed by normal stars.  It is the sixth closest star to Earth, after the Sun, Proxima Centauri, Alpha Centauri A %26 B and Barnard's star.  Still, its magnitude is a dim +13.5.
 Gliese 229A
 Gliese 229A is a red dwarf star.  It is a bit smaller than the Sun.  The red dwarf star is also written as GJ 229 or GI 229.  It is part of a binary star system, the second star being Gliese 229B.
 Gliese 229B
@@ -75,11 +75,11 @@ Saturn has the widest, most visible rings of the Solar System.  Galileo, who was
 TrES-4
 TrES-4 is the largest planet discovered.  No telescope can actually see TrES-4, but there are ways to prove its existence indirectly.  TrES-4's gravity causes the star it orbits to wobble slightly.  Also, whenever TrES-4 goes in front of the star, the shine of the star dims a little.
 Venus
-There was a time when Venus and Earth were thought to be sister planets.  That isn't true at all!  Venus's surface temperature is always above 450° C, because its atmosphere, which is mostly carbon dioxide, traps the Sun's heat!
+There was a time when Venus and Earth were thought to be sister planets.  That isn't true at all!  Venus's surface temperature is always above 450� C, because its atmosphere, which is mostly carbon dioxide, traps the Sun's heat!
 Mars
 Mars is known as the Red Planet.  It is red because it is rusty.  Many people believe water and life once existed on Mars.  However, even if that is true, the life wouldn't be like the little green men.
 Mercury
-Mercury is the closest planet to the Sun.  It has no atmosphere.  During the day, temperatures reach 400° C, but at night, the temperatures fall to -180° C. One Mercurian year is 88 Earth days.
+Mercury is the closest planet to the Sun.  It has no atmosphere.  During the day, temperatures reach 400� C, but at night, the temperatures fall to -180� C. One Mercurian year is 88 Earth days.
 Ganymede
 Ganymede is the largest moon in the Solar System.  It orbits Jupiter and was discovered by Galileo, which makes it a Galilean moon.  Also, Ganymede is not to be confused with Ganymed, which is an asteroid whose name doesn't have the final "e"!
 Callisto
@@ -89,21 +89,21 @@ Io has a lot of volcanoes - the most in the Solar System!  Io's geysers emit fro
 Europa
 Europa is the puniest of the Galilean moons.  It is covered with ice.  There are mysterious streaks that cover the moon's surface.  Some people believe water might exist beneath the layer of ice, possibly even holding life.
 Titan
-Titan is Saturn's only large moon.  It has a very thick atmosphere, which is made up of mostly nitrogen.  Earth's atmosphere is also mostly nitrogen.  Titan has seas of liquid methane. (It's around -180° C.)  There's even a continent called "Xanadu".
+Titan is Saturn's only large moon.  It has a very thick atmosphere, which is made up of mostly nitrogen.  Earth's atmosphere is also mostly nitrogen.  Titan has seas of liquid methane. (It's around -180� C.)  There's even a continent called "Xanadu".
 The Moon
-The Moon, also known as "Luna", is the brightest object in the night sky.  It orbits Earth every 27 days, 7 hours and 43 minutes.  I like to imagine seeing several moons scattered across the night sky. That would be amazing!
+The Moon, also known as "Luna\ is the brightest object in the night sky.  It orbits Earth every 27 days, 7 hours and 43 minutes.  I like to imagine seeing several moons scattered across the night sky. That would be amazing!
 Triton
-Triton is Neptune's largest moon.  It is also the coldest object in the Solar System, at -240° C.  Triton is also a very windy place, with winds going at almost the speed of sound!
+Triton is Neptune's largest moon.  It is also the coldest object in the Solar System, at -240� C.  Triton is also a very windy place, with winds going at almost the speed of sound!
 Pluto
-Pluto is no longer a planet.  Why do people feel sympathy for it?  It has no feelings.  Even if it did, why would it care about what people way over on Earth thought?  On another note, Pluto's official name is now "134340 Pluto", because it's a dwarf planet.
+Pluto is no longer a planet.  Why do people feel sympathy for it?  It has no feelings.  Even if it did, why would it care about what people way over on Earth thought?  On another note, Pluto's official name is now "134340 Pluto\ because it's a dwarf planet.
 Charon
 Charon is Pluto's only large moon.  They are very close in size.  They are so close, some people consider Pluto and Charon to be a double planet.  Did you know the same side of Charon always faces Pluto, and the same side of Pluto always faces Charon?
 Eris
 Eris is the largest dwarf planet.  It is even bigger than Pluto, which is also a dwarf planet.  Eris is also very far from the Sun.  Eris has a moon, and that's Dysnomia.  Where's Dysnomia?  It's directly beneath the period at the end of this last sentence.
 Dysnomia
-Dysnomia is Eris's only moon and was discovered on September 10, 2005, which was a Saturday.  Also, did you know that "Dysnomia" also refers to a  learning disability that is similar to dyslexia?
+Dysnomia is Eris's only moon and was discovered on September 10, 2005, which was a Saturday.  Also, did you know that "Dysnomia" also refers to a law conflict?
 Sedna
-Sedna has a very elliptical orbit.   It is so far away it takes 10,000 Earth years to complete one orbit.  You probably realized that "Sedna" backwards is "Andes", the world's longest mountain range. (It's in South America.)  Both may seem other-worldly!
+Sedna has a very elliptical orbit.   It is so far away it takes 10,000 Earth years to complete one orbit.  You probably realized that "Sedna" backwards is "Andes\ the world's longest mountain range. (It's in South America.)  Both may seem other-worldly!
 Quaoar
 Quaoar is very dense because its core is very big.  Quaoar may have been much larger long ago. It might have been hit by an object the size of Pluto, which would have stripped away the outer layers.
 Ceres
@@ -113,9 +113,9 @@ Polaris is known as the North Star.  It is very near the north pole, so if you w
 Antares
 Antares is a red supergiant very near the ecliptic, so it gets occulted by the Moon quite often.  Also, Antares weighs septillions of tons and is losing weight through solar wind, but this method is slow. The fast way is to explode, which it'll do later.
 Altair
-Altair is one of the three stars in the Summer Triangle.  The Summer Triangle is an acute triangle, which means that all the angles are less than 90°!  The other two are Vega and Deneb.  Like many other stars, Altair spins very quickly, bulging at the center!
+Altair is one of the three stars in the Summer Triangle.  The Summer Triangle is an acute triangle, which means that all the angles are less than 90�!  The other two are Vega and Deneb.  Like many other stars, Altair spins very quickly, bulging at the center!
 La Superba
-La Superba is one of the reddest stars in the night sky.  It is so red because of all the carbon-13 it creates when fusing helium.   (Normal carbon is carbon-12.)  La Superba is only 2500° C, making it one of the coldest stars.
+La Superba is one of the reddest stars in the night sky.  It is so red because of all the carbon-13 it creates when fusing helium.   (Normal carbon is carbon-12.)  La Superba is only 2500� C, making it one of the coldest stars.
 Pistol Star
 The Pistol Star is one of the most luminous stars known.  In twenty seconds, it radiates as much energy as the Sun does in a year. Interstellar dust prevents us from seeing it. It's called the Pistol Star not because of its luminosity, but because it's in the Pistol Nebula.
 S Doradus
@@ -143,7 +143,7 @@ Luyten's Star is a red dwarf star  12 light-years away from us.  It is so close 
 Procyon
 Did you know that over the next 10 million years, Procyon will grow to 100 times its current diameter and become red?  This is because Procyon's hydrogen is now all helium.  The Sun will do the same thing in a couple billion years.
 Asia
-Asia is the Earth's largest continent, holding over four billion people – over half of the world's population.  Africa is the second most populous continent, but only has one billion people.
+Asia is the Earth's largest continent, holding over four billion people � over half of the world's population.  Africa is the second most populous continent, but only has one billion people.
 Italy
 Italy was the home to Leonardo Da Vinci, who was an inventor, mathematician, engineer, painter, sculptor, scientist, musician, and much more.  Many other painters, including Raphael and Michelangelo, were also from Italy.
 Brunei
@@ -169,21 +169,21 @@ Nix is the smallest known moon of Pluto.  Its name is the second shortest name o
 Cruithne
 Cruithne is known as Earth's second moon.  It actually isn't Earth's moon.  It just follows an elliptical orbit around the Sun that is near Earth's orbit, and its year is 364 days, close to Earth's year.
 Distance from Earth to Moon
-The Earth and the Moon here are not to scale. If the distance were a metre, Earth would be the size of a 5p, and the moon would be a pea.
+The Earth and the Moon here are not to scale. If the distance were a meter, Earth would be the size of a quarter, and the moon would be a pea.
 Distance from Earth to Sun
-During the day, the Sun doesn't seem so far away. It's actually about 150 million kilometres away.  That distance is an Astronomical Unit, which is called an AU for short. 
+During the day, the Sun doesn't seem so far away. It's actually about 150 million kilometers away.  That distance is an Astronomical Unit, which is called an AU for short. ",
 Distance from Neptune to Sun
 Neptune is the most distant planet in the solar system.  The distance from Neptune to the Sun is greater than the diameter of any known star!
 Half Dome
 Half Dome is a large dome that is in Yosemite National Park.  It is made up of granite.  The steep side of the dome is almost vertical.  Don't fall off that side unless you want to.  Some people like to climb it, even though it is very challenging!
 Mount Everest
-Mount Everest is the highest mountain on Earth at 8,848 metres. It is constantly growing, like children do. Not many people can climb it without using an oxygen tank.
+Mount Everest is the highest mountain on Earth at 8,848 meters. It is constantly growing, like children do. Not many people can climb it without using an oxygen tank.
 Homunculus Nebula
 At the center of the Homunculus Nebula lies a star.  The star, which is Eta Carinae, had a magnitude of -0.8 in 1841 (second brightest star in the sky). Now, it is a very dim sixth-magnitude star.
 Kuiper Belt
 The Kuiper Belt is a region of the Solar System outside the orbit of Neptune where small bodies orbit.  Many dwarf planets exist here.  It's like a larger asteroid belt.
 Light-Year
-In one year, light travels about 9.46 trillion kilometres. This distance is known as a light-year. The light-year is commonly used for measuring astronomical distances.
+In one year, light travels about 9.46 trillion kilometers. This distance is known as a light-year. The light-year is commonly used for measuring astronomical distances.
 Oort Cloud
 The Oort Cloud is the outermost region of the solar system.  Water ice, ammonia ice, methane ice and comets loosely fill the region. The boundary of the Oort Cloud is also the boundary of the Sun's gravitational pull.
 Distance from the Sun to Proxima Centauri
@@ -191,15 +191,15 @@ Proxima Centauri is the closest star to the Sun. However, it is still quite far 
 Stingray Nebula
 The Sting Ray Nebula is a planetary nebula.  It is relatively young, and it constantly growing.  Whoever named this nebula must have thought it looked like a stingray.  Do you?
 Distance from Proxima Centauri to Alpha Centauri A
-Proxima Centauri is very far away from Alpha Centauri A & B.
+Proxima Centauri is very far away from Alpha Centauri A %26 B.
 Cat's Eye Nebula
-The Cat's Eye Nebula is one of the most complex nebulae known.  Did you know that the Cat's Eye Nebula is 8,000° C?  That's pretty hot!  The outer halo is even hotter, at 15,000° C.
+The Cat's Eye Nebula is one of the most complex nebulae known.  Did you know that the Cat's Eye Nebula is 8,000� C?  That's pretty hot!  The outer halo is even hotter, at 15,000� C.
 Ant Nebula
-The Ant Nebula, which is also called Mz 3, is expanding 180,000 kilometres per hour.  It resembles an ant, so much so that it is named after an ant.  For more about ants, zoom in 18 orders of magnitude.
+The Ant Nebula, which is also called Mz 3, is expanding 180,000 kilometers per hour.  It resembles an ant, so much so that it is named after an ant.  For more about ants, zoom in 18 orders of magnitude.
 Blinking Nebula
 The Blinking Nebula is a planetary nebula that doesn't actually blink.  It just seems to appear and disappear from view.  There are two red FLIERs (Fast Low-Ionization Emission Regions) on opposite side of the nebula.
 Boomerang Nebula
-The Boomerang Nebula is very cold, only one degree above absolute zero (-272° C)!  That is colder than background radiation.  Did you know the Boomerang Nebula is the coldest known object in the universe?
+The Boomerang Nebula is very cold, only one degree above absolute zero (-272� C)!  That is colder than background radiation.  Did you know the Boomerang Nebula is the coldest known object in the universe?
 Eskimo Nebula
 The Eskimo Nebula was discovered in 1787 and is the result of a Sun-like star exploding.  It supposedly looks like a head in the hood of a parka.  Another name is the Clownhead Nebula.
 The Great Pyramid of Giza
@@ -213,19 +213,19 @@ The Hourglass Nebula is actually shaped like an hourglass.  As you can see, ther
 Rotten Egg Nebula
 The Rotten Egg Nebula has sulfur in it.  That's probably why this nebula is called the Rotten Egg Nebula.  I think it looks a bit like a raw egg, where the blue is the cracked shell and the yellow is the yolk spilling out.
 Light-Day
-Even in just twenty-four hours, light manages to zoom across the distance of 26 billion kilometres.  That is distance is further than any human or space probe has travelled.
+Even in just twenty-four hours, light manages to zoom across the distance of 26 billion kilometers.  That is distance is further than any human or space probe has travelled.
 Distance from Voyager 1 to Earth
-Over the last 34 years, Voyager 1 has travelled to a distance of 17 billion kilometres, which is the furthest any man-made object has gone.  You can't see it, even if you stare really, really hard!
+Over the last 34 years, Voyager 1 has travelled to a distance of 17 billion kilometers, which is the furthest any man-made object has gone.  You can't see it, even if you stare really, really hard!
 Distance from Sedna to Sun (farthest)
 When Sedna is the farthest from the Sun, it is very far away.  This point is called the "aphelion"!  It takes Sedna over 10,000 Earth years to complete one orbit.
 Distance from Comet Hale-Bopp to Sun (farthest)
 The comet Hale-Bopp gets very far from the Sun.  It takes 2,500 years to orbit once.
 Halley's Comet
-The actual size of Halley's Comet is quite small.  The tail that it forms can be millions of kilometers in length!  Halley's comet loses 10% of its mass for every thousand orbits.
+The actual size of Halley's Comet is quite small.  The tail that it forms can be millions of kilometers in length!  Halley's comet loses 10%25 of its mass for every thousand orbits.
 Ring Nebula
 The Ring Nebula looks a lot like a ring.  The old belief was that all planetary nebulae were ring-shaped like this one, but that is now known to not be true.  There are other shapes planetary nebulae can be.
 Helix Nebula
-The Helix Nebula is one of the closest bright planetary nebulae to Earth.  It is 400 light-years away from Earth!  That's only four quadrillion (4,000,000,000,000,000) kilometres!  (That is close, astronomically speaking.)
+The Helix Nebula is one of the closest bright planetary nebulae to Earth.  It is 400 light-years away from Earth!  That's only four quadrillion (4,000,000,000,000,000) kilometers!  (That is close, astronomically speaking.)
 Bubble Nebula
 I love blowing bubbles.  Blub-blub, pop!  This nebula is not a bubble; it just looks like one!  It was created by hot stellar wind.  Oh, and it's an emission nebula, not a planetary nebula.
 Cone Nebula
@@ -233,7 +233,7 @@ The Cone Nebula was discovered in 1785, on the day after Christmas.  Did you kno
 The Pillars of Creation
 The Pillars of Creation lie within the Eagle Nebula.  The Eagle Nebula is 7,000 light-years away from us.  Evidence shows that the Pillars of Creation were  destroyed by a supernova about 6,000 years ago, so we only have another millennium to see it.
 Eagle Nebula
-The Eagle Nebula is a huge stellar nursery.  Can you see the Pillars of Creation within it?  Also, note that this image is based off of a false-colour photograph.  In true colour, it's a bit more pinkish (as most large nebulae are).
+The Eagle Nebula is a huge stellar nursery.  Can you see the Pillars of Creation within it?  Also, note that this image is based off of a false-color photograph.  In true color, it's a bit more pinkish (as most large nebulae are).
 Crab Nebula
 The Crab Nebula is one of the most famous nebulae.  It was also the first Messier object catalogued (M1)!  The Crab Nebula's supernova was seen in 1054 AD and was so bright it could be seen during the day.  It  isn't even 1,000 years old!
 Orion Nebula
@@ -259,7 +259,7 @@ The Lagoon Nebula is a nebula that was named the Lagoon Nebula in 1747, the year
 Tarantula Nebula
 The Tarantula Nebula is the largest known nebula.  It can be found in the Large Magellanic cloud.  It's very bright, with an absolute magnitude is -11. It is the brightest non-stellar object known.
 Parsec
-Earth's movement around the Sun causes nearby stars to appear to move, called parallax.  If a nearby star is perpendicular to the solar system and is exactly one parsec away, its parallax will be exactly one arcsecond (1/3600°).  Parallax + Arcsec = Parsec
+Earth's movement around the Sun causes nearby stars to appear to move, called parallax.  If a nearby star is perpendicular to the solar system and is exactly one parsec away, its parallax will be exactly one arcsecond (1/3600�).  Parallax + Arcsec = Parsec
 Gigaparsec
 A gigaparsec is one billion parsecs.  It is one of the largest  measures of distance.  There's really no need to have any measure larger, because the radius of the observable universe is only 14 gigaparsecs.
 Universe
@@ -269,9 +269,9 @@ The radius, which is half of the diameter, is about 46 billion light-years.  You
 Sloan Great Wall
 The Sloan Great Wall is represented by the thick green band.  It is the largest known object in the universe.  It is made up of galaxies, and is called a galactic filament.  We are not in it.  In fact, it lies about one billion light-years from us.
 Eridanus Supervoid
-It's a region in the night sky that's slightly cooler than the normal CMB temperature.  It's 2.7° K, or -270.5° C.  Barely above absolute zero.  One theory says it leads to a parallel universe.  Whoa!
+It's a region in the night sky that's slightly cooler than the normal CMB temperature.  It's 2.7� K, or -270.5� C.  Barely above absolute zero.  One theory says it leads to a parallel universe.  Whoa!
 Sagittarius Dwarf Galaxy
-The Sagittarius is one of the Milky Way's satelite galaxies.  It is only 70,000 light-years distant!  It is an elliptical galaxy, and a dwarf one as well.  It was not discovered until 1994.
+The Sagittarius is one of the Milky Way's satellite galaxies.  It is only 70,000 light-years distant!  It is an elliptical galaxy, and a dwarf one as well.  It was not discovered until 1994.
 Canis Major Dwarf Galaxy
 The Canis Major Dwarf Galaxy is the nearest galaxy, if you don't count the Milky Way itself.  It lies between the arms of the Milky Way and is being pulled apart by the gravity of the Milky Way.
 Milky Way
@@ -283,7 +283,7 @@ The Small Magellanic Cloud is only called small because it is smaller than the g
 Large Magellanic Cloud
 The Large Magellanic Cloud is only called large because it is larger than the galaxy nearest to it, the Small Magellanic Cloud.  If the Small Magellanic Cloud were larger, the Large Magellanic Cloud would be called the Smaller Magellanic Cloud!
 Triangulum Galaxy
-This galaxy is not shaped like a triangle; it's just called that because it is found in the constellation Triangulum.  Did you realize that any three stars form a "triangle constellation"?  You could have millions of triangle constellations!  
+This galaxy is not shaped like a triangle; it's just called that because it is found in the constellation Triangulum.  Did you realize that any three stars form a "triangle constellation"?  You could have millions of triangle constellations!  ",
 Sombrero Galaxy
 Do you think the Sombrero Galaxy looks like a sombrero?  I'm not sure.  Oh!  Did you know that there is a supermassive  black hole in the center of this galaxy?  Most large galaxies have supermassive black holes.  Our Milky Way might!
 Pisces-Cetus Supercluster Complex
@@ -311,15 +311,15 @@ Astronomers think the Cartwheel Galaxy had a collision with two nearby galaxies 
 NGC 1232
 NGC 1232 is a pretty big galaxy.  It's bigger than ours, but it's not the biggest.  Of course, IC 1101 is not the biggest galaxy, it's only the biggest galaxy we know of.  There are probably many more!
 Omega Centauri
-Omega Centauri is a globular cluster.  It is the brightest globular cluster.  The center is very crowded. Stars there are 0.1 light-years apart, which is 2% of the distance from our Sun to the nearest star.  (That is really close!)
+Omega Centauri is a globular cluster.  It is the brightest globular cluster.  The center is very crowded. Stars there are 0.1 light-years apart, which is 2%25 of the distance from our Sun to the nearest star.  (That is really close!)
 Messier 54
 Messier 54, or M54, or NGC 6715, is another globular cluster.  It is in the Sagittarius Dwarf Galaxy, which would mean it's the first globular cluster outside of the Milky Way to be discovered.
 Virgo A
 Virgo A is the largest galaxy in the Virgo Cluster.  It's a supergiant elliptical galaxy.  Did you know that the black hole at its center is flinging out a jet of subatomic matter 5,000 light-years long?
 NGC 4889
-This very large galaxy, which is also known as Caldwell 35, is the brightest galaxy in the Coma cluster.  It is going away from us at 6,500 kilometres per second.  At that speed, it could circumnavigate the Earth in less than seven seconds!
+This very large galaxy, which is also known as Caldwell 35, is the brightest galaxy in the Coma cluster.  It is going away from us at 6,500 kilometers per second.  At that speed, it could circumnavigate the Earth in less than seven seconds!
 Leo II Dwarf Galaxy
-The Leo II Dwarf Galaxy is a sattelite of the Milky Way Galaxy.  It is one of twenty-four known satelites of the Milky Way.  The stars in Leo II are metal-poor.  They're also relatively old.
+The Leo II Dwarf Galaxy is a satellite of the Milky Way Galaxy.  It is one of twenty-four known satellites of the Milky Way.  The stars in Leo II are metal-poor.  They're also relatively old.
 Canes Venatici Dwarf Galaxy I
 The Canes Venatici Dwarf Galaxy I is 720,000 light-years away from us.  If you zoom out to that scale, this galaxy will be a couple pixels across.
 NGC 3310
@@ -333,13 +333,13 @@ The Great Attractor is pulling thousands of galaxies, including the Milky Way, t
 Distance to the Shapley Supercluster
 The Shapley Supercluster is a supercluster of galaxies.  It is one of the largest objects that collapses inward; anything larger expands with the universe.
 Distance to the Andromeda Galaxy
-At two million light-years away, the Andromeda Galaxy is the most distant object visible to the naked eye.  However, without binoculars or a telescope, it will appear as a dim blur.  
+At two million light-years away, the Andromeda Galaxy is the most distant object visible to the naked eye.  However, without binoculars or a telescope, it will appear as a dim blur.  ",
 Total Human Height
-If all the 7 billion humans stood on top of one another, and the bottom 6.99 billion humans didn't crumple under all the weight, the stack would be approximately 10 million kilometres tall.
+If all the 7 billion humans stood on top of one another, and the bottom 6.99 billion humans didn't crumple under all the weight, the stack would be approximately 10 million kilometers tall.
 Hydrogen Atom
 Hydrogen is the most abundant element in the universe.  It's usually just a proton and a electron!  A hydrogen atom is so small you can't even see it with your naked eye, even if you try your hardest.
 Helium Atom
-H atoms are larger than He atoms because more protons in an atom's nucleus pull the electrons in closer.  However, additional shells increase the size of the atoms the most.  CS, the largest atom, has the most shells with the fewest elctrons. (Fr  unmeasured)
+Hydrogen atoms are larger than Helium atoms because more protons in an atom's nucleus pull the electrons in closer.  However, additional shells increase the size of the atoms the most.  Cesium, the largest atom, has the most shells with the fewest electrons. (Francium has not been measured.)
 Helium Nucleus
 The helium nucleus is thousands of times smaller than the atom, like a marble in a football field.  The only reason matter feels solid is because atoms repel.  If atoms didn't repel, everything would fall through each other!
 Chlorine Nucleus
@@ -355,13 +355,13 @@ The Japanese Spider Crab is the largest arthropod.  However, not all Japanese Sp
 Eiffel Tower
 For 41 years, the Eiffel Tower was the tallest man-made structure in the world.  200 million people have been to the Eiffel Tower, which is almost the population of the U.S.A.!
 Approximate size of this viewport
-Although different monitors have different pixel sizes, things on the screen are approximately the same size.  This is approximately 20 centimetres across!
+Although different monitors have different pixel sizes, things on the screen are approximately the same size.  This is approximately 20 centimeters across!
 Proton
-Protons are found within an atom's nucleus.  They are thousands of times smaller than the atom itself.  They have two up quarks and one down quark.  Therefore, the proton's charge is +2/3+2/3-1/3 = +1.  
+Protons are found within an atom's nucleus.  They are thousands of times smaller than the atom itself.  They have two up quarks and one down quark.  Therefore, the proton's charge is +2/3+2/3-1/3 = +1.  ",
 Neutron
-Neutrons are found within an atom's nucleus.  They are thousands of times smaller than the atom itself.  They have two down quarks and one up quark.  Therefore, the neutron's charge is -1/3-1/3+2/3 = 0.  
+Neutrons are found within an atom's nucleus.  They are thousands of times smaller than the atom itself.  They have two down quarks and one up quark.  Therefore, the neutron's charge is -1/3-1/3+2/3 = 0.  ",
 Angstrom
-An angstrom, which is named after Swedish physicist Anders Jonas Ångström, is one tenth of a nanometer. The symbol for an angstrom is Å. The angstrom is used to express the size of atoms.
+An angstrom, which is named after Swedish physicist Anders Jonas �ngstr�m, is one tenth of a nanometer. The symbol for an angstrom is �. The angstrom is used to express the size of atoms.
 Cesium Atom
 Atom size is measured by the distance of the nuclei in covalent bonds.  The shells don't look actually like this.  Cesium is the largest atom, but its atomic number is not the highest.  Why? See Helium Atom.
 Quantum Foam
@@ -375,13 +375,13 @@ The dodo bird went extinct sometime during the 1600s.  The name comes from the s
 Redwood Tree
 The redwood tree is the tallest tree in the world.  Its height, combined with that of an ant's, is greater than any human's!  However, the universe is still 10^25 times larger.
 Boeing 747
-The Boeing 747, which flies, is an aeroplane.  Since 1969, it's been shorter than a  redwood tree.  Before then, it didn't exist, so it wasn't shorter or longer.  And yes, its wingspan is longer than the Wright brother's first flight (37 meters).
+The Boeing 747, which flies, is an airplane.  Since 1969, it's been shorter than a  redwood tree.  Before then, it didn't exist, so it wasn't shorter or longer.  And yes, its wingspan is longer than the Wright brother's first flight (37 meters).
 Saguaro Cactus
-Not all Saguaro cacti grow to be 14 metres tall, unfortunately. Some may only be a measly five metres tall.  Some are armless– those are called spears.  It takes saguaro cacti 75 years to fully grow an arm, while it takes humans less than 20.
+Not all Saguaro cacti grow to be 14 meters tall, unfortunately. Some may only be a measly five meters tall.  Some are armless� those are called spears.  It takes saguaro cacti 75 years to fully grow an arm, while it takes humans less than 20.
 Blue Whale
 The blue whale is the largest animal there is. Its weight, which is 180 metric tons, is greater than any other animal's.  Unfortunately, whaling has lowered the blue whale's population from 300,000 to 2,000.
 Basketball
-This basketball is probably a size 7 basketball, because a size 6 basketball is only 23 centimetres in diameter.  This basketball, which is very round, is often pushed through a hoop.
+This basketball is probably a size 7 basketball, because a size 6 basketball is only 23 centimeters in diameter.  This basketball, which is very round, is often pushed through a hoop.
 Elephant
 The elephant is the largest land animal.  Only three species of elephants remain.  They can weigh up to 8 tons, which is about 10 times the weight any human has ever achieved!
 Angel Falls
@@ -389,11 +389,11 @@ Angel Falls is the tallest waterfall in the world.  It is Venezuela's top touris
 Burj Khalifa
 Burj Khalifa, which used to be called the Burj Dubai, is the tallest building in the world. No other building is taller than 828,000 millimeters tall.  There's a swimming pool on the 76th floor.
 Uluru
-Uluru, which is also known as Ayers Rock, is a rock.  At 348 metres tall, it is shorter than many buildings.  However, it is three kilometres in length, making it longer than all buildings.
+Uluru, which is also known as Ayers Rock, is a rock.  At 348 meters tall, it is shorter than many buildings.  However, it is three kilometers in length, making it longer than all buildings.
 Large Hadron Collider
 The Large Hadron Collider is the world's largest and highest-energy particle accelerator.  It smashes protons into protons, and studies some of the tiniest things in the universe: the quarks and leptons, and hopefully the Higgs boson.
 Boeing Everett Factory
-The Boeing Everett Factory, with 13 million cubic metres of usable space, is the largest building in the world.  The Great Wall of China and the Three Gorges Dam  do not qualify as buildings.
+The Boeing Everett Factory, with 13 million cubic meters of usable space, is the largest building in the world.  The Great Wall of China and the Three Gorges Dam  do not qualify as buildings.
 Titanic
 The Titanic sank when it hit an iceberg. Although it was capable of holding enough lifeboats for 4,000 people, they decided they only needed enough lifeboats for 1,178 people.  There were 2,228 people on the Titanic.
 Vatican City
@@ -409,19 +409,19 @@ Ultraviolet light can give you a tan.  I used to think the sunlight and heat bur
 Violet Light Wavelength
 Also known as mauve, purple, or even regalia, violet, which can be called lavender, periwinkle or iris, and sometimes even amethyst or eggplant, is also referred to as fuchsia, indigo or lilac, and on rare occasions, byzantium, thistle, wisteria, fandango and heliotrope.
 Red Light Wavelength
-Red is the first colour of the rainbow.  It stimulates appetite.  That's why so many food companies have red in their logo.  They want you to eat!  In short, they're trying to fool your brain.
+Red is the first color of the rainbow.  It stimulates appetite.  That's why so many food companies have red in their logo.  They want you to eat!  In short, they're trying to fool your brain.
 Infrared Wavelength
 Things that are extremely rare are "inf-rare". (infinitely rare).  Inf-rare is also a verb, meaning "to make inf-rare". (e.g., "John inf-rared the precious food by eating the last of it.")  Infrared light used to be quite common, but one day, a scientist somehow "infrared" it.
 Microwave Wavelength
-Actually, the range of microwaves is pretty large.  They range from one millimetre to one metre.  So you see, this electromagnetic wave, with a wavelength of one centimetre, comfortably fits into this range and thus is a microwave!
+Actually, the range of microwaves is pretty large.  They range from one millimeter to one meter.  So you see, this electromagnetic wave, with a wavelength of one centimeter, comfortably fits into this range and thus is a microwave!
 FM Radio Wavelength
 F and M are the sixth and thirteenth letters of the alphabet.  Six is a perfect number, while thirteen is not.  We all have our differences, and we have to learn to accept them.  That's the only way we'll live in harmony.
 AM Radio Wavelength
 A and M are the first and thirteenth letters of the alphabet.  One is a perfect square, while thirteen is not.  We all have our differences, and we have to learn to accept them.  That's the only way we'll live in harmony.
 DNA
-A single human cell contains 3 meters of deoxyribonucleic acid.  That DNA, while being only a few nanometers across, holds around 25,000 genes in around 3 billion base pairs.  That is a lot!
+DNA, which is a nucleic acid, stores the genetic information of almost all living things on Earth (except for some viruses.)  A single human cell contains 3 meters of deoxyribonucleic acid, which holds about 25,000 genes in about 3 billion base pairs.
 White Blood Cell
-These mass murderers are also known as leukocytes.  There are many different types of this disease-fighting cell.  The most common type, the neutrophil, has multiple nuclei.  The largest type, the macrophage, has a diameter of a whopping 21 µm.
+These mass murderers are also known as leukocytes.  There are many different types of this disease-fighting cell.  The most common type, the neutrophil, has multiple nuclei.  The largest type, the macrophage, has a diameter of a whopping 21 �m.
 Red Blood Cell
 Around one quarter of all human cells are red blood cells.  They circulate through one cycle every 20 seconds, and only live around four months.  The dent allows for more surface area, which means it's easier to transport oxygen.  Oh, and they have no nucleus.
 Ovum (Human Egg)
@@ -433,9 +433,9 @@ People use pencil lead a lot.  Oh, by the way, this is mechanical pencil lead.  
 Largest Bacteria
 The largest bacteria, which is Thiomargarita namibiensis, is almost one millimeter in length.  It lives in the ocean off the coast of Namibia.  Can you imagine being in the ocean, and seeing these things?  They're very visible!
 Shrew
-Shrews are great little thingies.  Their metabolism rate is so high  they must eat their body weight every single day!  Also, 10% of their body weight is their brain.  That's the highest of any animal's, including humans!
+Shrews are great little thingies.  Their metabolism rate is so high  they must eat their body weight every single day!  Also, 10%25 of their body weight is their brain.  That's the highest of any animal's, including humans!
 HIV
-HIV, which stands for Human Immunodeficiency Virus, infects 0.6% of the world's population and causes AIDS, which stands for Acquired Immune Deficiency Syndrome.  About 5 million new infections happen every year.
+HIV, which stands for Human Immunodeficiency Virus, infects 0.6%25 of the world's population and causes AIDS, which stands for Acquired Immune Deficiency Syndrome.  About 5 million new infections happen every year.
 Grain of Sand
 Of course, not all grains of sand are the same size.  They vary a lot.  Arenophiles are people who collect sand samples.  Also, did you know that Papakolea Beach has green sand?  This is because of crystals in the sand.  Whatever.
 Silt Particle
@@ -447,7 +447,7 @@ I like to think that whenever I drink water, I drink Mickey Mouse heads.  Do you
 Russell's Teapot
 Bertrand Russell said that there was a teapot orbiting the Sun between Earth and Mars.  No one could disprove him because such a teapot would not be visible.  Even though the teapot's existence could not be disproven, it seems illogical to believe it exists.
 Minecraft World
-Stretching from the coordinates +32,000,000 to -32,000,000, the Minecraft world spans a total of 64,000 kilometres.  This world has approximately 130 quadrillion blocks in it!  That sure is a lot!
+Stretching from the coordinates +32,000,000 to -32,000,000, the Minecraft world spans a total of 64,000 kilometers.  This world has approximately 130 quadrillion blocks in it!  That sure is a lot!
 Up Quark
 There are six flavors of quarks.  They are up, down, strange charm, top, and bottom.  The smaller a quark is, the more mass it has.  As a result, the up and down quarks are actually the lightest of the quarks.  This up quark has a charge of +2/3.
 Down Quark
@@ -471,11 +471,11 @@ Central Park, which is in New York City, is the most visited urban park in the U
 Marathon
 A marathon is 42.2 kilometers, or 26.2 miles.  About one thousandth of Americans have run a marathon.  According to legend, after a Greek victory in the Battle of Marathon, Pheidippides was sent to Athens to tell the news.  The distance was a marathon!
 Wandering Albatross
-The Wandering Albatross is the bird with the largest wingspan!  They fly almost all the time, only stopping to eat and make babies. Their population is slowly decreasing.  Now it is only at 26,000, which isn't very much. 
+The Wandering Albatross is the bird with the largest wingspan!  They fly almost all the time, only stopping to eat and make babies. Their population is slowly decreasing.  Now it is only at 26,000, which isn't very much. ",
 Width of Human Hair
-Human hair is amazing.  Straight hair is almost perfectly cylindrical.  On the other hand, curly hair is flatter, which allows to to curl, like a ribbon.  Did you know that you probably have 50,000 to 200,000 strands of hair on your head?  You can count!
+Human hair is amazing.  Straight hair is almost perfectly cylindrical.  On the other hand, curly hair is flatter, which allows it to curl, like a ribbon.  Did you know that you probably have 50,000 to 200,000 strands of hair on your head?  You can count!
 Ant
-You probably don't like ants.  That's too bad.  15-25% of all land animals are ants!  Whoa!  That's a lot of ants!  For every person on Earth, there are over one million ants!
+You probably don't like ants.  That's too bad.  15-25%25 of all land animals are ants!  Whoa!  That's a lot of ants!  For every person on Earth, there are over one million ants!
 Average U.S. House
 These houses of the United States have been getting larger.  In the last 40 years, the average house has almost doubled in area!  These houses are so large, you could fit 1,000 people in them!  It would be pretty cramped, though.
 Giraffe
@@ -487,7 +487,7 @@ Amphilicoelias fragilimus was the largest dinosaur ever!  It weighed over 100 to
 Hummingbird
 Hummingbirds flap their wings 12-80 times per second, which is about the same frequency as the lowest notes on the piano.  They can also fly backwards and hover in mid-air.  Amazing skills!
 Apollo Lunar Module
-This thing weighs 15,000 kilograms!  That's a lot!  It also landed on the Moon.  Its landing inspired the arcade game "Lunar Lander", which is not easy.  When I play, I always run out of fuel!
+This thing weighs 15,000 kilograms!  That's a lot!  It also landed on the Moon.  Its landing inspired the arcade game "Lunar Lander\ which is not easy.  When I play, I always run out of fuel!
 Football Field
 American football fields are 120 yards (109.7 m) long, if end zones are included. Anyway, football fields are often used for measuring large objects.  For example, "The Titanic is three football fields long!"  Football fields are also used for playing football.
 Gateway Arch
@@ -501,7 +501,7 @@ The International Space Station is pretty cool.  It floats around in low Earth o
 Statue of Liberty
 Although the Statue of Liberty is a symbol of America, it was actually built in France.  It was based off of an ancient statue of the Greek Sun god Helios.  The Statue of Liberty is pretty cool, even though the torch has been closed since 1916 because it is dangerous.
 Great Wall of China
-The Great Wall of China is 8,850 kilometres in length.  However, it twists and turns, so the distance from the endpoints is actually only 2,900 kilometres.  The Great Wall of China is not visible from space.  It's less than 10 meters wide!  Most houses are wider than that!
+The Great Wall of China is 8,850 kilometers in length.  However, it twists and turns, so the distance from the endpoints is actually only 2,900 kilometers.  The Great Wall of China is not visible from space.  It's less than 10 meters wide!  Most houses are wider than that!
 Depth of the Mariana Trench
 The Mariana Trench is a pretty deep trench.  It is in the Pacific Ocean. Did you know that this lovely trench has been proposed as a site for dumping nuclear waste?  That's a deep topic!
 Sleet
@@ -509,9 +509,9 @@ Sleet, which falls from the sky, is made of ice pellets.  That ball to the left 
 Largest Hailstone
 The largest hailstone was found in South Dakota.  However, most hailstones don't even come close to this size.  The average diameter is a measly centimeter.  Oh, I would also like to point out that not all hailstones are round.
 Grain of Rice
-A lot of people on our beautiful world eat rice.  If you eat one bowl of rice per day, you will eat an around 300 million grains of rice in your lifetime. That is also approximately the population of the United States! 
+A lot of people on our beautiful world eat rice.  If you eat one bowl of rice per day, you will eat an around 300 million grains of rice in your lifetime. That is also approximately the population of the United States! ",
 Beach ball
-Beach balls were invented in 1938, which was over 70 years ago.  Beach balls are also colourful.  In addition, they are very fun!  The only beach ball that isn't fun is the beach ball of death.
+Beach balls were invented in 1938, which was over 70 years ago.  Beach balls are also colorful.  In addition, they are very fun!  The only beach ball that isn't fun is the beach ball of death.
 Rafflesia
 The rafflesia is the largest single flower in the world.  It can weigh up to 10 kilograms, which is actually pretty heavy.  The flower smells like rotting flesh to attract flies, which will pollinate it.
 U.S. Penny
@@ -523,13 +523,13 @@ According to the string theory, strings are one-dimensional, but vibrates in all
 Buckyball
 Buckyballs, which are also called Buckminsterfullerenes, are made of 60 carbon atoms.  The shape it forms is a truncated icosahedron, which is also the shape of a soccer ball!  A solution made completely out of buckyballs is purple.
 Sunflower
-Did you know that the "flower" of a sunflower is not a single flower, but actually a flower head made up of thousands of small flowers?  These small flowers are called florets.  The florets in the center become sunflower seeds, which are currently invisible at this scale.
+'Did you know that the "flower" of a sunflower is not a single flower, but actually a flower head made up of thousands of small flowers?  These small flowers are called florets.  The florets in the center become sunflower seeds, which are currently invisible at this scale.',
 X Chromosome
-X chromosomes are absolutely wonderful.  Most chromosomes look like X's even if they aren't sex chromosomes – those are autosomes.  Females have two X chromosomes while males have an X and a Y chromosome.
+X chromosomes are absolutely wonderful.  Most chromosomes look like X's even if they aren't sex chromosomes � those are autosomes.  Females have two X chromosomes while males have an X and a Y chromosome.
 Y Chromosome
-The Y chromosome, a sex chromosome, appears only in males.  Did you know that the Y chromosome is continuing to shrink as it evolves, and will possibly disappear completely?  I find that to be very fascinating!
+The Y chromosome, a sex chromosome, appears only in males.  Did you know that the Y chromosome is continuing to shrink as it evolves, and might possibly disappear completely?  I find that to be very fascinating!
 Glucose Molecule
-Glucose is a simple sugar.  Plants make glucose through photosynthesis and turn it into complex sugars.  When we (as humans) eat plants or animals that have eaten plants, we eat complex sugars, which we break down into glucose again, which we use for energy. 
+Glucose is a simple sugar.  Plants make glucose through photosynthesis and turn it into complex sugars.  When we (as humans) eat plants or animals that have eaten plants, we eat complex sugars, which we break down into glucose again, which we use for energy. ",
 Phospholipid
 Phospholipids are beautifully amazing little molecules, and you have millions of millions of millions of them in your body.  Phospholipids are actually a special type of lipid that make up cell membranes.
 Phospholipid Bilayer
@@ -537,13 +537,13 @@ Cell membranes are made of phospholipid bilayers.  Phospholipid bilayers can for
 Sunflower Seed
 Sunflower seeds are exhilaratingly delicious.  They are so yummy, they can be made into "sunflower seed bread"!  Sunflower seeds are not real seeds.  They are the fruits of the sunflower!  They are only called "seeds" because they resemble other seeds.
 Skin Cell
-The outermost layer of skin, which is also the only visible layer of skin, is made up of dead cells.  That's because dead cells are the strongest, and stronger skin provides more protection!  These cells continuously fall off.  In fact, dust is 95% dead skin cells!
+The outermost layer of skin, which is also the only visible layer of skin, is made up of dead cells.  That's because dead cells are the strongest, and stronger skin provides more protection!  These cells continuously fall off.  In fact, dust is 95%25 dead skin cells!
 Amoeba
-Amoeba are unicellular, which means there is only one cell. Some amoebae can grow to an incredible 700 micrometres, which is almost an entire millimetre.
+Amoeba are unicellular, which means there is only one cell. Some amoebae can grow to an incredible 700 micrometers, which is almost an entire millimeter.
 E. coli
 E. coli are usually harmless and live in your intestines, making wonderful vitamin K2.  They are in almost everyone's intestines.  In fact, they colonize in babies' intestines just two days after they are born!  Now that's pretty fast!
 Paramecium
-Paramecia vary quite a lot in size, but it's usually around 200 mircrometres.  These little guys are protists and like to swim in water.  They can move two millimeters per second!
+Paramecia vary quite a lot in size, but it's usually around 200 mircrometers.  These little guys are protists and like to swim in water.  They can move two millimeters per second!
 Duckweed
 These are water lentils that float in ponds and other bodies of water.  They don't have stems or roots.  On the other hand, they do create flowers, which are the smallest of any plant on Earth.
 Mist droplet
@@ -551,7 +551,7 @@ Mist can reduce visibility a bit.  It can also reflect light, so that you can se
 Thickness of Paper
 Paper is very thin.  It's so thin it can give you a paper cut.  You can do a lot of things with paper, including writing on it, drawing on it, and even folding it into shapes like squares and triangles and dodecahedrons and others.
 Transistor Gate
-Transistors in computers are continuing to get smaller.  In 1971, they were 400 times larger at 10 micrometres.  Now we are down to 25 nanometres, but in the future, they might be even smaller.  How small will they get?
+Transistors in computers are continuing to get smaller.  In 1971, they were 400 times larger at 10 micrometers.  Now we are down to 25 nanometers, but in the future, they might be even smaller.  How small will they get?
 Largest Virus
 The largest virus known used to be the Mimivirus, whose name I like, but it is now the Megavirus, whose name I also like.  However, I do not like the viruses themselves.  Did you know that Megavirus has the longest genome of a virus?
 Smallest Thing Visible to an Optical Microscope
@@ -559,13 +559,13 @@ Optical microscopes cannot see objects smaller than 200 nanometers because the w
 Range of the Weak Force
 The weak force is one of the four fundamental forces of nature, and is the weaker of the two nuclear forces.  As distances increases, its strength decreases.  At just 10 attometers, the weak force is so weak it is unmeasurable.
 Mimivirus
-This little thingy was discovered in 1992 within an amoeba, which is only 500 times larger.  Mimivirus used to be the largest virus known, but now that is the Megavirus.  
+This little thingy was discovered in 1992 within an amoeba, which is only 500 times larger.  Mimivirus used to be the largest virus known, but now that is the Megavirus.  ",
 Bacteriophage
 The bacteriophage, or just "phage" for short, is a type of bacteria-infecting virus.  I think they look like robots, not life forms.  But it also could be argued that viruses are not alive at all.
 Dust mite
 Dust mites like to eat dust, which you probably know is just dead skin cells.  Many people are allergic to dust mites.  Some people are allergic to their poop.  Either way, almost all people want to get rid of this pesky pest.
 Twip
-A twip is a twentieth of a typographical point.  That means that 12-point font is approximately 240 twips high. Also, TUIP can stand for "The Universe in Perspective", an old name for the Scale of the Universe 2.  TUIP and twip are pronounced the same.
+A twip is a twentieth of a typographical point.  That means that 12-point font is approximately 240 twips high. Also, TUIP can stand for "The Universe in Perspective\ an old name for the Scale of the Universe 2.  TUIP and twip are pronounced the same.
 Thou
 Although the word "thou" is most commonly known as being an old form of the word "you", a thou is also a unit of measurement.  It is equal of one thousandth of an inch; in fact, that's where it gets its name.  THOUsandth.  Pretty cool.
 Width of Silk Fiber
@@ -573,7 +573,7 @@ Silk is valuable and can be woven into clothing, which usually turns out quite s
 Neutron Star
 Neutron stars are made of tightly packed neutrons.  As a result, they are extremely dense.  One milliliter of neutron star material weighs 500 billion kilograms! (That's about the weight of all humans combined.)
 Chloroplast
-Plant use chloroplasts to turn the Sun's energy into chemical energy, which is stored in glucose molecules!  Chloroplasts are also what give plants their green colour, because they have fabulous chlorophyll inside their thylakoid membranes.
+Plant use chloroplasts to turn the Sun's energy into chemical energy, which is stored in glucose molecules!  Chloroplasts are also what give plants their green color, because they have fabulous chlorophyll inside their thylakoid membranes.
 Cell nucleus
 Nuclei are pretty cool, and they can be found within all eukaryotic cells.  (Human cells are eukaryotic.)  The nucleus is where all the DNA is.  During mitosis, the DNA will condense into chromosomes, and then the cell will split in two.
 Texas
@@ -583,7 +583,7 @@ Electrons are so small that their size can't accurately be measured. The size of
 Carbon Nanotube
 Carbon nanotubes are the strongest material yet discovered.  As another bonus, they're lightweight.  As a result, nanotubes have a lot of potential applications, including buildings, batteries, solar panels, and possibly even a space elevator.
 Alpha Helix
-The alpha helix is one of the secondary structures of proteins. Many proteins have alpha helixes within them.  Hemoglobin and myglobin are proteins that are made of about 70% alpha helixes! 
+The alpha helix is one of the secondary structures of proteins. Many proteins have alpha helixes within them.  Hemoglobin and myglobin are proteins that are made of about 70%25 alpha helixes! ",
 Hepatitis B Virus
 Hepatitis B infects a lot of humans.  In fact, almost one third of the world population has been infected at some point.  This virus causes vomiting, liver inflammation, and possibly death.
 Porcine circovirus
@@ -594,10 +594,10 @@ Carbon Atom
 Carbon is the basis of all life on Earth.  This is because carbon atoms can create four covalent bonds, which means it can bond in thousands of ways with oxygen, nitrogen, hydrogen, carbon, and other elements.
 The Great Barrier Reef
 The Great Barrier Reef, which is off the northeastern coast of Australia, is the biggest single structure made by living organisms!  It is home to several thousand species of coral, mollusks, whales, turtles, dolphins, birds, and much more!
-metre
-metres
-centimetre
-centimetres
+meter
+meters
+centimeter
+centimeters
 light-year
 light-years
 yocto
@@ -620,6 +620,6 @@ yotta
 The Scale of the Universe 2
 Use the scroll bar to zoom in and out.
 Click on objects to learn more.
-Unknown Translator
-British English
-British English
+Descriptions written by Cary Huang
+English
+English
