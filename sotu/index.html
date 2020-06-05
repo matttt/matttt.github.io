@@ -45,6 +45,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/spin.css">
   <link rel="stylesheet" type="text/css" href="css/dialog-polyfill.css">
@@ -68,14 +69,24 @@
 
 
   <div id="frame" style="visibility: hidden;" class="frameStyle">
-    <a href=".">
-      <img src="img/lang.svg" class="lang">
-    </a>
-    <div class="wrap">
+    <div id="buttons">
+      <a href=".">
+        <img src="img/lang.svg" class="lang">
+      </a>
+      <div id="muteToggle">
+        <a href="#" class="speaker">
+            <span></span>
+        </a>
+      </div>
+      <div class="hd hd-click" id="hqToggle">HQ</div>
+    </div>
+  </div>
+
+    <!-- <div class="wrap">
       <input id="muteToggle" type="checkbox">
       <span class="first"></span>
       <span class="second"></span>
-    </div>
+    </div> -->
   </div>
   <!-- <div id="frame" style="display: none;" class="frameStyle"></div> -->
 
@@ -119,13 +130,13 @@
 
       
           <div class="tutBox nw">
-            <img style="max-width: 80%;" src="img/slider.png">
+            <img style="max-width: 80%; max-height: 12vh" src="img/slider.png">
           </div>
           <div class="tutBox sw">
             <h2 id="moveSliderText"></h2>
           </div>
           <div class="tutBox ne">
-            <img style="max-width: 80%;" src="img/object.png">
+            <img style="max-width: 80%; max-height: 12vh" src="img/object.png">
           </div>
           <div class="tutBox se">
             <h2 id="clickObjectText"></h2>
