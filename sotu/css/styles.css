@@ -27,7 +27,7 @@ dialog[open] {
 
 #startGrid {
   display: grid;
-  height: 60%;
+  height: 50%;
   left: 10%;
   grid-template-columns: 50% 50%;
   grid-gap: 3%;
@@ -57,6 +57,14 @@ dialog .actions {
 
 body {
   margin: 40px;
+}
+
+#credits {
+  right: 0;
+  top: 5px;
+  text-align: right;
+  font-size: .8rem;
+  line-height: .5;
 }
 
 .wrapper {
