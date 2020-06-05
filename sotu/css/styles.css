@@ -124,7 +124,7 @@ body {
   background-color: rgb(168, 168, 168, 0);
   color: rgb(0, 0, 0);
   border-radius: 5px;
-  font-size: 100%;
+  font-size: 12px;
   padding: 30px;
   height: 30%;
 }
@@ -134,24 +134,31 @@ body {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
+  height: 20%
 }
 .ne {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
+  height: 20%
+
 }
 .sw {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-end: 4;
+  height: 20%
+
 }
 .se {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-end: 4;
+  height: 20%
+
 }
 
 .box {
