@@ -89,9 +89,9 @@ dialog {
   padding: 2rem;
   border-radius: 6px;
   box-shadow: 0 0 40px rgba(0,0,0,0.1), 0 0 10px rgba(0,0,0,0.25);
-  width: 40vw !important;
+  width: 650px !important;
   top: 10vh;
-  min-height: 45vh !important;
+  height: 400px !important;
 }
 
 dialog[open] {
@@ -157,6 +157,7 @@ body {
   grid-gap: 10px;
   color: #444;
   padding-top: 10%;
+  height: 80%
 }
 
 #startWrapper {
@@ -201,7 +202,6 @@ body {
   grid-row-start: 2;
   grid-row-end: 4;
   height: 20%
-
 }
 
 .box {
@@ -211,7 +211,8 @@ body {
   padding: 20px;
   font-size: 100%;
   box-shadow: 0 0 20px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.25);
-  border: 0px
+  border: 0px;
+  height: 100%;
 }
 
 
