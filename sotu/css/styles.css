@@ -80,6 +80,15 @@ body {
   color: #4f4f4f;
 }
 
+.backarrow {
+  position: absolute;
+  font-family: 'roboto', sans-serif;
+  top: 15px;
+  left: 25px;
+  font-size: 12px;
+  color: #333;
+}
+
 
 dialog {
   background-color: var(--bg);
