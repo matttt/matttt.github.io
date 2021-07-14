@@ -20,6 +20,7 @@ function draw() {
 
   let inCount = 0;
 
+  strokeWeight(2)
   for (const p of points) {
     if (dist(p[0], p[1], 200, 200) < 200) {
       inCount++;
