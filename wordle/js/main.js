@@ -55,11 +55,14 @@ class LetterGrid {
   }
 
   gg() {
-    alert('word was ' + this.word)
+    this.draw() // draw
+    setTimeout(() => alert('word was ' + this.word), 100)
   }
 
   wp() {
-    alert('youuuuu got it!')
+    this.draw()
+    
+    setTimeout(() => alert('youuuuu got it!'), 100)
   }
   
   addLetter(letter) {
