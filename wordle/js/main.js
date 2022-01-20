@@ -1,9 +1,21 @@
+
 const alphabet = 'a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z'.split(', ')
+const colors = {
+  yellow: '#FFA552',
+  green: '#87A878',
+  gray: '#646165',
+  blue: '#A9CEF4'
+}
+
+function setOrIncr(obj,field) {
+  obj[field] ? obj[field]++ : obj[field] = 1
+} 
 
 class LetterGrid {
   constructor(word) {
     this.word = word
     this.curLetter = 0
+    this.over = false
     this.letters = [
       ['','','','',''],
       ['','','','',''],
@@ -33,23 +45,38 @@ class LetterGrid {
 
   draw() {
     const s = width/5
-    for (let i = 0; i < 5; i++) { // cols
-      for (let j = 0; j < 5; j++) { // rows
+
+    const wordLCs = {}
+    for (const letter of this.word) {
+      setOrIncr(wordLCs, letter)
+    }
+
+    for (let j = 0; j < 5; j++) { // rows
+
+      const guessLCs = {}
+
+      for (const letter of this.letters[j]) {
+        setOrIncr(guessLCs, letter)
+      }
+
+      for (let i = 0; i < 5; i++) { // cols
         if (this.shows[j]) {
+
+
           const letter = this.letters[j][i]
           if (this.word[i] === letter) {
-            fill('green')
+            fill(colors.green)
           } else if (this.word.includes(letter)) {
-            fill('yellow')
+            fill(colors.yellow)
           } else {
-            fill('grey')
+            fill(colors.gray)
           }
         } else {
           fill('white')
         }
         square(i*s, j*s, s)
         fill('black')
-        text(this.letters[j][i], i*s+s/2, j*s+s/2+12)
+        text(this.letters[j][i], i*s+s/2, j*s+s/2+s/4)
       }
     }
   }
@@ -61,8 +88,15 @@ class LetterGrid {
 
   wp() {
     this.draw()
+    this.over=true
     
     setTimeout(() => alert('youuuuu got it!'), 100)
+  }
+
+  nah(word) {
+    this.draw()
+    
+    setTimeout(() => alert(word+ ' is not a word dummy!'), 100)
   }
   
   addLetter(letter) {
@@ -73,16 +107,27 @@ class LetterGrid {
 
 
     if (colIdx === 4) {
+      const word = [...this.letters[rowIdx], letter].join('')
+
+      if (word === this.word) {
+        this.wp()
+      } else if (!allWords.includes(word)) {
+        this.nah(word)
+        this.letters[rowIdx].forEach((l,idx) => this.letters[rowIdx][idx] = '')
+
+        this.curLetter = rowIdx*5;
+        return
+      }
+
       this.shows[rowIdx] = true
 
-      if (this.letters[rowIdx].join('') === this.word) {
-        this.wp()
-      }
     }
+
+
     this.letters[rowIdx][colIdx] = letter
     this.curLetter++
 
-    if (this.curLetter === 25) {
+    if (this.curLetter === 25 && !this.over) {
       this.gg()
     }
   }
@@ -102,14 +147,17 @@ class LetterGrid {
 let letterGrid
 function setup() {
   // createCanvas(400, 400);
-  const canvas = createCanvas(400,400).center('horizontal');
-  canvas.parent('viewport');
+  const s = Math.min(innerWidth, innerHeight)
+  const canvas = createCanvas(s,s).center('horizontal');
+  // canvas.parent('viewport');
   textAlign(CENTER)
-  textSize(48)
+  textSize((s/5)-100)
 
   const randomIdx = Math.floor(Math.random()*words.length-1)
 
   letterGrid = new LetterGrid(words[randomIdx])
+
+  noLoop()
 }
 
 
@@ -121,6 +169,8 @@ function keyPressed(e) {
   } else if (letter === 'backspace') {
     letterGrid.removeLetter()
   }
+
+  draw()
 }
 
 function draw() {
