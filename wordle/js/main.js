@@ -3,8 +3,9 @@ const alphabet = 'a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u,
 const colors = {
   yellow: '#FFA552',
   green: '#87A878',
-  gray: '#646165',
-  blue: '#A9CEF4'
+  gray: '#999999',
+  blue: '#A9CEF4',
+  text: '#333333'
 }
 
 function setOrIncr(obj,field) {
@@ -18,10 +19,12 @@ class LetterGrid {
     this.over = false
     this.letters = [
       ['','','','',''],
+
       ['','','','',''],
       ['','','','',''],
       ['','','','',''],
-      ['','','','','']
+      ['','','','',''],
+      ['','','','',''],
     ]
     // this.letters = [
     //   ['','','','d','e'],
@@ -37,6 +40,7 @@ class LetterGrid {
       false,
       false,
       false,
+      false,
     ]
 
 
@@ -44,40 +48,69 @@ class LetterGrid {
   }
 
   draw() {
-    const s = width/5
+    const s = width/6
+    const ws = width/5
 
-    const wordLCs = {}
-    for (const letter of this.word) {
-      setOrIncr(wordLCs, letter)
-    }
+    for (let j = 0; j < 6; j++) { // rows
 
-    for (let j = 0; j < 5; j++) { // rows
+      const wordLCs = {}
 
-      const guessLCs = {}
-
-      for (const letter of this.letters[j]) {
-        setOrIncr(guessLCs, letter)
+      for (const letter of this.word) {
+        setOrIncr(wordLCs, letter)
       }
 
-      for (let i = 0; i < 5; i++) { // cols
-        if (this.shows[j]) {
 
 
-          const letter = this.letters[j][i]
-          if (this.word[i] === letter) {
-            fill(colors.green)
-          } else if (this.word.includes(letter)) {
-            fill(colors.yellow)
-          } else {
-            fill(colors.gray)
-          }
-        } else {
-          fill('white')
+      if (this.shows[j]) {
+
+
+        const lettercolors = [null,null,null,null,null]
+        console.log(wordLCs)
+
+
+        for (let i = 0; i < 5; i++) {
+          if (this.word[i] === this.letters[j][i]) {
+            lettercolors[i] = colors.green
+            wordLCs[this.letters[j][i]]--;
+          } 
         }
-        square(i*s, j*s, s)
-        fill('black')
-        text(this.letters[j][i], i*s+s/2, j*s+s/2+s/4)
+
+
+        for (let i = 0; i < 5; i++) {
+          if (this.word.includes(this.letters[j][i]) && !lettercolors[i] && wordLCs[this.letters[j][i]] > 0) {
+            lettercolors[i] = colors.yellow
+            wordLCs[this.letters[j][i]]--;
+          } 
+        }
+
+        
+
+        console.log(wordLCs)
+
+
+        for (let i = 0; i < 5; i++) {
+          fill(colors.gray)
+
+          if (lettercolors[i]) {
+            fill(lettercolors[i])
+          } 
+          
+          square(i*ws, j*s, ws)
+          fill(colors.text)
+          text(this.letters[j][i], i*ws+ws/2, j*s+s/2+s/4)
+        }
+
+
+      } else {
+        for (let i = 0; i < 5; i++) { // cols
+          fill('white')
+          square(i*ws, j*s, ws)
+          fill(colors.text)
+          text(this.letters[j][i], i*ws+ws/2, j*s+s/2+s/4)
+        }
       }
+
+      
     }
   }
 
@@ -100,7 +133,7 @@ class LetterGrid {
   }
   
   addLetter(letter) {
-    if (this.curLetter >= 25) return; 
+    if (this.curLetter >= 30) return; 
 
     const rowIdx = Math.floor(this.curLetter/5)
     const colIdx = this.curLetter%5
@@ -127,13 +160,13 @@ class LetterGrid {
     this.letters[rowIdx][colIdx] = letter
     this.curLetter++
 
-    if (this.curLetter === 25 && !this.over) {
+    if (this.curLetter === 30 && !this.over) {
       this.gg()
     }
   }
 
   removeLetter() {
-    if (this.curLetter < 1) return;
+    if (this.curLetter < 1 || this.curLetter%5 === 0) return;
 
     const rowIdx = Math.floor((this.curLetter-1)/5)
     const colIdx = (this.curLetter-1)%5
@@ -156,6 +189,7 @@ function setup() {
   const randomIdx = Math.floor(Math.random()*words.length-1)
 
   letterGrid = new LetterGrid(words[randomIdx])
+  // letterGrid = new LetterGrid('hello')
 
   noLoop()
 }
