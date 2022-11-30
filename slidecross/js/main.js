@@ -499,7 +499,7 @@ BMW##
 EIEIO
 ARENA
 DEPTH
-YOU##
+##YOU
 `
 // const testBoardStr = `
 // DRS##S#P
