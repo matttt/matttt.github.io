@@ -1,0 +1,1 @@
+window.responsiveVoice = { speak(text) { if (window === window.top && navigator.userActivation?.isActive && 'speechSynthesis' in window) { speechSynthesis.cancel(); speechSynthesis.speak(new SpeechSynthesisUtterance(text)); } } };

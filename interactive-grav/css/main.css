@@ -1,0 +1,77 @@
+.dg {
+    z-index: 0;
+}
+
+.sliderW {
+    width: 18%
+}
+
+#body-title {
+    width: 50%
+}
+
+.infobarthing{
+    display: block;
+    position: absolute;
+    left: 90%;
+    bottom: 10px;
+    color: white;
+    font-size: 8px;
+}
+
+#xc .slider-selection {
+    background: #FF8282 !important;
+}
+
+#xc .slider-handle {
+    background: red !important;
+}
+
+#yc .slider-selection {
+    background: #3a7b38 !important;
+}
+
+#yc .slider-handle {
+    background: green !important;
+}
+
+#zc .slider-selection {
+    background: #8283FF !important;
+}
+
+.modaldialog {
+    opacity: .5;
+}
+
+#zc .slider-handle {
+    border-bottom-color: blue !important;
+}
+
+#vxc .slider-selection {
+    background: #FF8282 !important;
+}
+
+#vxc .slider-handle {
+    background: red !important;
+}
+
+#vyc .slider-selection {
+    background: #3a7b38 !important;
+}
+
+#vyc .slider-handle {
+    background: green !important;
+}
+
+#vzc .slider-selection {
+    background: #8283FF !important;
+}
+
+#vzc .slider-handle {
+    border-bottom-color: blue !important;
+}
+
+
+.slider:hover > * { opacity: 1 !important; } 
+
+.dg {height: 100% !important}
